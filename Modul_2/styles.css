@@ -83,12 +83,12 @@ p:last-child {
   width: 60px;
   text-decoration: none;
 }
-.fixed-navigation ul a:focus {
+.fixed-navigation ul .plus-symbol {
   background-color: white;
   border-bottom-left-radius: 40%;
   border-bottom-right-radius: 40%;
 }
-.fixed-navigation ul a:focus .material-symbols-outlined {
+.fixed-navigation ul .plus-symbol .material-symbols-outlined {
   color: red;
 }
 

@@ -27,7 +27,6 @@ header{
         z-index: 99; //så att texten placerar sig över gradient/::after
     }
 }
-
 //detta här är bara en gradient from black to transparent med hjälp av pseudoelement som gör att texen sysn lite bättre
 header::after {
     content: '';
@@ -39,10 +38,10 @@ header::after {
     background: linear-gradient(to bottom, transparent 0%, black 100%);
 }
 
-    p{
-        width: 40ch;
-        margin: 100px auto;
-        font-size: 1rem;
+p{
+    width: 40ch;
+    margin: 100px auto;
+    font-size: 1rem;
     }
     p:first-child{
         margin-top: 50px;
@@ -78,10 +77,9 @@ header::after {
             align-items: center;
             height: 100%;
             width: 60px;
-            // max-width: 60px;
             text-decoration: none;
         }
-        a:focus{
+        .plus-symbol{
             background-color: white;
             border-bottom-left-radius: 40%;
             border-bottom-right-radius: 40%;
@@ -99,7 +97,6 @@ header::after {
     'GRAD' 0,
     'opsz' 40;
 }
-
 span.material-symbols-outlined{
     font-size: 40px;
     color:  white;
