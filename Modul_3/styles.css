@@ -32,6 +32,9 @@ p {
   height: 10vh;
   min-height: 5rem;
   flex: 0 0 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .main-navigation li:last-child {
   background-color: #a2d26b;
