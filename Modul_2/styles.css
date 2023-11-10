@@ -9,35 +9,6 @@ img {
   width: 100%;
 }
 
-header {
-  background-image: url(img/pexels-oleksandr-p-12932558.jpg);
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  height: 35vh;
-  min-height: 250px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
-header .main-title {
-  padding-bottom: 2rem;
-  color: white;
-  font-size: 2rem;
-  z-index: 99;
-}
-
-header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, transparent 0%, black 100%);
-}
-
 p {
   width: 40ch;
   margin: 100px auto;
@@ -52,13 +23,42 @@ p:last-child {
   padding-bottom: 50px;
 }
 
+.main-header {
+  background-image: url(img/pexels-oleksandr-p-12932558.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 35vh;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.main-header .main-title {
+  padding-bottom: 2rem;
+  color: white;
+  font-size: 2rem;
+  z-index: 1;
+}
+.main-header .main-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, black 100%);
+  z-index: -1;
+}
+
 .fixed-navigation {
   position: fixed;
   bottom: 0;
   right: 0;
   width: 100%;
   background-color: green;
-  height: 10vh;
+  height: 5vh;
   min-height: 80px;
 }
 .fixed-navigation ul {
