@@ -10,68 +10,67 @@ body{
     color: white;
 }
 
-main{
-    max-width: 1024px;
-    margin: 0 auto;
-}
-
-p{
-    width: 40ch;
-    margin: 100px auto;
-    font-size: 1.2rem;
-}
-
-.main-navigation{
-    width: 100%;
-    background-color: #6ba2d2;
-    ul{
-        display: flex;
-    }li{
-        list-style: none;
-        height: 10vh;
-        min-height: 5rem;
-        flex: 0 0 20%;
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    .main-navigation {
         display: flex;
         justify-content: center;
-        align-items: center;
-    } li:last-child{
-        background-color: #a2d26b;
-    }li:active{
-        background-color: #a2d26b;
-    } a{
-        display: flex;
-        height: inherit;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        
+        flex: 0 0 80%;
+        .navigation-list{
+            list-style: none;
+            display: flex;
+            flex: 0 0 100%;
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 0 0 25%;
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1 1 auto;
+                    height: 100%;
+                    text-decoration: none;
+                    color: purple;
+                    background-color: #b2d26b;
+                    &:hover{
+                        background-color: aqua;
+                    } 
+                    &.active{
+                        background-color: aqua;
+                    }
+                }
+                .link-text{
+                    display: none;
+                }
+            }
+        } 
     }
-}
+    .profile-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 20%;
+        background-color: #d26bb8;
+        .user_face_img{
+            display: block;
+            height: 60px;
+            width: 60px;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+    }
+} 
 
-.user_face_img{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: solid 2px white;
-}
-
+//google font styles
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 1,
     'wght' 400,
     'GRAD' 0,
     'opsz' 40;
-}
-span.material-symbols-outlined{
     font-size: 2.5rem;
-    color: #a2d26b;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &:active {
-        color: white;
-    }
 }
+
