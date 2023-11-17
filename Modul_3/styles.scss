@@ -1,4 +1,10 @@
+//variables för färger
+$wrapper-color: rgb(38, 4, 4);
+$active-color: brown;
+$body-background-color:rgb(74, 72, 72);
+$icon-color: rgb(173, 15, 173);
 
+//liten css reset
 *{
     padding: 0;
     margin: 0;
@@ -6,17 +12,27 @@
 }
 
 body{
-    background-color: #d29b6b;
+    background-color: $body-background-color;
     color: white;
+    font-family: sans-serif;
+    font-size: 1.3rem;
 }
 
 .wrapper{
     display: flex;
     justify-content: space-between;
+    height: 8.5vh;
+    background-color: $wrapper-color;
+    @media screen and (min-width: 768px){
+        justify-content: flex-start;
+    }
     .main-navigation {
         display: flex;
         justify-content: center;
         flex: 0 0 80%;
+        @media screen and (min-width: 768px){
+            flex: 0 0 50%
+        }
         .navigation-list{
             list-style: none;
             display: flex;
@@ -32,37 +48,85 @@ body{
                     align-items: center;
                     flex: 1 1 auto;
                     height: 100%;
+                    color: $icon-color;
                     text-decoration: none;
-                    color: purple;
-                    background-color: #b2d26b;
-                    &:hover{
-                        background-color: aqua;
-                    } 
+                    background-color: transparent;
                     &.active{
-                        background-color: aqua;
+                        background-color: $active-color;
+                        color: white;
+                        @media screen and (min-width: 768px){
+                            background-color: transparent;
+                                border-bottom: solid 3px $icon-color;
+                            }
+                        }
                     }
                 }
                 .link-text{
                     display: none;
+                    @media screen and (min-width: 768px){
+                        display: flex;
+                        color: $icon-color;
+                    }
                 }
             }
         } 
+    .logo{
+        display: none;
+        justify-content: center;
+        align-items: center;
+        color: $icon-color;
+        @media screen and (min-width: 768px){
+            display: flex;
+            flex: 0 0 10%;
+        }
+        .logo-icon{
+            display: none;
+            @media screen and (min-width: 768px){
+                display: flex;
+            }
+        }
     }
     .profile-image{
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: purple;
         flex: 0 0 20%;
-        background-color: #d26bb8;
+        @media screen and (min-width: 768px){
+            background-color: transparent;
+            margin-left: auto;
+        }
         .user_face_img{
             display: block;
-            height: 60px;
-            width: 60px;
+            height: 50px;
+            width: 50px;
             border: 2px solid white;
             border-radius: 50%;
         }
     }
-} 
+    // searchbar, en wrapper med input 
+    // och iconen som jag positionerad med hjälp av position absolute
+    .search-wrapper{
+        flex: 1 1 auto;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        display: none;
+        .search-icon{
+            color: gray;
+            position: absolute;
+            left: 30px;
+        }
+        input{
+            width: 100%;
+            height: 100%;
+            font-size: 1.5rem;
+            text-align: center;
+            border-radius: 2rem;
+        }
+}
+}
+
 
 //google font styles
 .material-symbols-outlined {
@@ -72,5 +136,8 @@ body{
     'GRAD' 0,
     'opsz' 40;
     font-size: 2.5rem;
+    @media screen and (min-width: 768px){
+        display: none;
+    }
 }
 
