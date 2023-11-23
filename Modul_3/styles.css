@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: space-between;
   height: 5rem;
-  max-width: 1200px;
+  max-width: 1366px;
   margin: 0 auto;
   background-color: rgb(38, 4, 4);
 }
@@ -107,7 +107,7 @@ body {
     margin-left: auto;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1366px) {
   .wrapper .profile-image {
     background-color: transparent;
     flex: 0 0 10%;
@@ -127,14 +127,14 @@ body {
   display: none;
   width: 15rem;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1366px) {
   .wrapper .search-wrapper {
     display: flex;
     margin-left: auto;
   }
 }
 .wrapper .search-wrapper .search-icon {
-  color: gray;
+  color: grey;
   display: block;
   position: absolute;
   top: 1.4rem;
@@ -145,7 +145,7 @@ body {
   font-size: 1.5rem;
   text-align: center;
   border-radius: 2rem;
-  background-color: lightcoral;
+  background-color: rgb(224, 139, 139);
   color: white;
 }
 
