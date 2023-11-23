@@ -21,7 +21,9 @@ body{
 .wrapper{
     display: flex;
     justify-content: space-between;
-    height: 8.5vh;
+    height: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
     background-color: $wrapper-color;
     @media screen and (min-width: 768px){
         justify-content: flex-start;
@@ -96,6 +98,10 @@ body{
             background-color: transparent;
             margin-left: auto;
         }
+        @media screen and (min-width: 1200px){
+            background-color: transparent;
+            flex: 0 0 10%;
+        }
         .user_face_img{
             display: block;
             height: 50px;
@@ -107,22 +113,29 @@ body{
     // searchbar, en wrapper med input 
     // och iconen som jag positionerad med hjälp av position absolute
     .search-wrapper{
-        flex: 1 1 auto;
         justify-content: center;
         align-items: center;
         position: relative;
         display: none;
+        width: 15rem;
+        @media screen and (min-width: 1200px){
+            display: flex;
+            margin-left: auto;
+        }
         .search-icon{
             color: gray;
+            display: block;
             position: absolute;
-            left: 30px;
+            top: 1.4rem;
+            left: 0.8rem;
         }
         input{
-            width: 100%;
-            height: 100%;
+            height: 60%;
             font-size: 1.5rem;
             text-align: center;
             border-radius: 2rem;
+            background-color: lightcoral;
+            color: white;
         }
 }
 }

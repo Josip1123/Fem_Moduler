@@ -14,7 +14,9 @@ body {
 .wrapper {
   display: flex;
   justify-content: space-between;
-  height: 8.5vh;
+  height: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: rgb(38, 4, 4);
 }
 @media screen and (min-width: 768px) {
@@ -105,6 +107,12 @@ body {
     margin-left: auto;
   }
 }
+@media screen and (min-width: 1200px) {
+  .wrapper .profile-image {
+    background-color: transparent;
+    flex: 0 0 10%;
+  }
+}
 .wrapper .profile-image .user_face_img {
   display: block;
   height: 50px;
@@ -113,23 +121,32 @@ body {
   border-radius: 50%;
 }
 .wrapper .search-wrapper {
-  flex: 1 1 auto;
   justify-content: center;
   align-items: center;
   position: relative;
   display: none;
+  width: 15rem;
+}
+@media screen and (min-width: 1200px) {
+  .wrapper .search-wrapper {
+    display: flex;
+    margin-left: auto;
+  }
 }
 .wrapper .search-wrapper .search-icon {
   color: gray;
+  display: block;
   position: absolute;
-  left: 30px;
+  top: 1.4rem;
+  left: 0.8rem;
 }
 .wrapper .search-wrapper input {
-  width: 100%;
-  height: 100%;
+  height: 60%;
   font-size: 1.5rem;
   text-align: center;
   border-radius: 2rem;
+  background-color: lightcoral;
+  color: white;
 }
 
 .material-symbols-outlined {
