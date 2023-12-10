@@ -12,9 +12,9 @@ body {
 }
 
 .main-navigation {
-  max-width: 1200px;
+  max-width: 1400px;
   background-color: rgb(38, 4, 4);
-  height: 8vh;
+  height: 9vh;
   margin: 0 auto;
 }
 .main-navigation .navigation-list {
@@ -31,6 +31,11 @@ body {
 @media screen and (min-width: 768px) {
   .main-navigation .navigation-list .nav-item {
     flex: 0 0 13%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .main-navigation .navigation-list .nav-item {
+    justify-content: space-around;
   }
 }
 .main-navigation .navigation-list .nav-item.logo {
@@ -80,6 +85,21 @@ body {
 
 .search-wrapper {
   display: none;
+}
+@media screen and (min-width: 1400px) {
+  .search-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: -100px;
+  }
+}
+.search-wrapper .searchbar {
+  height: 50%;
+  width: 200px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgb(187, 171, 143);
 }
 
 .profile-image {
