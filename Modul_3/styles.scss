@@ -1,5 +1,5 @@
 //variables för färger
-$wrapper-color: rgb(38, 4, 4);
+$nav-bg-color: rgb(38, 4, 4);
 $active-color: brown;
 $body-background-color:rgb(74, 72, 72);
 $icon-color: rgb(173, 15, 173);
@@ -18,128 +18,84 @@ body{
     font-size: 1.3rem;
 }
 
-.wrapper{
-    display: flex;
-    justify-content: space-between;
-    height: 5rem;
-    max-width: 1366px;
+.main-navigation{
+    max-width: 1200px;
+    background-color: $nav-bg-color;
+    height: 8vh;
     margin: 0 auto;
-    background-color: $wrapper-color;
-    @media screen and (min-width: 768px){
-        justify-content: flex-start;
-    }
-    .main-navigation {
+    .navigation-list{
         display: flex;
-        justify-content: center;
-        flex: 0 0 80%;
-        @media screen and (min-width: 768px){
-            flex: 0 0 50%
-        }
-        .navigation-list{
-            list-style: none;
+        height: inherit;
+        list-style: none;
+        .nav-item{
+            flex: 0 0 20%;
             display: flex;
-            flex: 0 0 100%;
-            li{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex: 0 0 25%;
-                a{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex: 1 1 auto;
-                    height: 100%;
-                    color: $icon-color;
-                    text-decoration: none;
-                    background-color: transparent;
-                    &.active{
-                        background-color: $active-color;
-                        color: white;
-                        @media screen and (min-width: 768px){
-                            background-color: transparent;
-                                border-bottom: solid 3px $icon-color;
-                            }
-                        }
-                    }
-                }
-                .link-text{
-                    display: none;
-                    @media screen and (min-width: 768px){
-                        display: flex;
-                        color: $icon-color;
-                    }
-                }
-            }
-        } 
-    .logo{
-        display: none;
-        justify-content: center;
-        align-items: center;
-        color: $icon-color;
-        @media screen and (min-width: 768px){
-            display: flex;
-            flex: 0 0 10%;
-        }
-        .logo-icon{
-            display: none;
+            justify-content: center;
+            align-items: center;
             @media screen and (min-width: 768px){
+                flex: 0 0 13%;
+                }
+            &.logo{
+                display: none;
+                    @media screen and (min-width: 768px){
+                    display: flex;
+                    }
+                }
+            a{
                 display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                text-decoration: none;
+                color: $icon-color;
+                @media screen and (min-width: 768px){
+                    border-bottom: 4px solid transparent;
+                    border-top: 4px solid transparent;
+                    // försök att fixa att active class border
+                    // flyttar på content i element
+                }
+                &.active{
+                    background-color: $active-color;
+                    color: white;
+                    @media screen and (min-width: 768px){
+                        background-color: $nav-bg-color;
+                        color:$icon-color;
+                        border-bottom: 4px solid $active-color;
+                    }
+                }
             }
         }
     }
-    .profile-image{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: purple;
-        flex: 0 0 20%;
-        @media screen and (min-width: 768px){
-            background-color: transparent;
-            margin-left: auto;
-        }
-        @media screen and (min-width: 1366px){
-            background-color: transparent;
-            flex: 0 0 10%;
-        }
-        .user_face_img{
-            display: block;
-            height: 50px;
-            width: 50px;
-            border: 2px solid white;
-            border-radius: 50%;
-        }
-    }
-    // searchbar, en wrapper med input 
-    // och iconen som jag positionerad med hjälp av position absolute
-    .search-wrapper{
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        display: none;
-        width: 15rem;
-        @media screen and (min-width: 1366px){
-            display: flex;
-            margin-left: auto;
-        }
-        .search-icon{
-            color: grey;
-            display: block;
-            position: absolute;
-            top: 1.4rem;
-            left: 0.8rem;
-        }
-        input{
-            height: 60%;
-            font-size: 1.5rem;
-            text-align: center;
-            border-radius: 2rem;
-            background-color: rgb(224, 139, 139);
-            color: white;
-        }
-}
 }
 
+.link-text{
+    display: none;
+    @media screen and (min-width: 768px){
+        display: block;
+        text-transform: uppercase;
+    }
+}
+
+.search-wrapper{
+    display: none;
+}
+
+.profile-image{
+    background-color: rgb(79, 16, 168);
+    .user_face_img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        @media screen and (min-width: 768px){
+            border: 2px solid white;
+        }
+    }
+    @media screen and (min-width: 768px){
+        margin-left: auto;
+        background-color: transparent;
+    }
+}
 
 //google font styles
 .material-symbols-outlined {
@@ -151,6 +107,141 @@ body{
     font-size: 2.5rem;
     @media screen and (min-width: 768px){
         display: none;
+        &.logo-icon{
+            display: flex;
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+// .wrapper{
+//     display: flex;
+//     justify-content: space-between;
+//     height: 5rem;
+//     max-width: 1366px;
+//     margin: 0 auto;
+//     background-color: $wrapper-color;
+//     @media screen and (min-width: 768px){
+//         justify-content: flex-start;
+//     }
+//     .main-navigation {
+//         display: flex;
+//         justify-content: center;
+//         flex: 0 0 80%;
+//         @media screen and (min-width: 768px){
+//             flex: 0 0 50%
+//         }
+//         .navigation-list{
+//             list-style: none;
+//             display: flex;
+//             flex: 0 0 80%;
+//             li{
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 flex: 0 0 20%;
+//                 a{
+//                     display: flex;
+//                     justify-content: center;
+//                     align-items: center;
+//                     flex: 1 1 auto;
+//                     height: 100%;
+//                     color: $icon-color;
+//                     text-decoration: none;
+//                     background-color: transparent;
+//                     &.active{
+//                         background-color: $active-color;
+//                         color: white;
+//                         @media screen and (min-width: 768px){
+//                             background-color: transparent;
+//                                 border-bottom: solid 3px $icon-color;
+//                             }
+//                         }
+//                     }
+//                 }
+//                 .link-text{
+//                     display: none;
+//                     @media screen and (min-width: 768px){
+//                         display: flex;
+//                         color: $icon-color;
+//                     }
+//                 }
+//             }
+//         } 
+//     .logo{
+//         display: none;
+//         justify-content: center;
+//         align-items: center;
+//         color: $icon-color;
+//         @media screen and (min-width: 768px){
+//             display: flex;
+//             flex: 0 0 10%;
+//         }
+//         .logo-icon{
+//             display: none;
+//             @media screen and (min-width: 768px){
+//                 display: flex;
+//             }
+//         }
+//     }
+//     .profile-image{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         background-color: purple;
+//         flex: 0 0 20%;
+//         @media screen and (min-width: 768px){
+//             background-color: transparent;
+//             margin-left: auto;
+//         }
+//         @media screen and (min-width: 1366px){
+//             background-color: transparent;
+//             flex: 0 0 10%;
+//         }
+//         .user_face_img{
+//             display: block;
+//             height: 50px;
+//             width: 50px;
+//             border: 2px solid white;
+//             border-radius: 50%;
+//         }
+//     }
+//     // searchbar, en wrapper med input 
+//     // och iconen som jag positionerad med hjälp av position absolute
+//     .search-wrapper{
+//         justify-content: center;
+//         align-items: center;
+//         position: relative;
+//         display: none;
+//         width: 15rem;
+//         @media screen and (min-width: 1366px){
+//             display: flex;
+//             margin-left: auto;
+//         }
+//         .search-icon{
+//             color: grey;
+//             display: block;
+//             position: absolute;
+//             top: 1.4rem;
+//             left: 0.8rem;
+//         }
+//         input{
+//             height: 60%;
+//             font-size: 1.5rem;
+//             text-align: center;
+//             border-radius: 2rem;
+//             background-color: rgb(224, 139, 139);
+//             color: white;
+//         }
+// }
+// }
+
 
