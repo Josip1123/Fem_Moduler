@@ -33,11 +33,6 @@ body {
     flex: 0 0 13%;
   }
 }
-@media screen and (min-width: 1400px) {
-  .main-navigation .navigation-list .nav-item {
-    justify-content: space-around;
-  }
-}
 .main-navigation .navigation-list .nav-item.logo {
   display: none;
 }
@@ -72,12 +67,11 @@ body {
     border-bottom: 4px solid brown;
   }
 }
-
-.link-text {
+.main-navigation .navigation-list .nav-item a .link-text {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .link-text {
+  .main-navigation .navigation-list .nav-item a .link-text {
     display: block;
     text-transform: uppercase;
   }

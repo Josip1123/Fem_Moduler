@@ -22,10 +22,10 @@ body{
     max-width: 1400px;
     background-color: $nav-bg-color;
     height: 9vh;
-    margin: 0 auto;
+    margin: 0 auto; //att centrera hela navbar
     .navigation-list{
         display: flex;
-        height: inherit;
+        height: inherit; //jag ville att ul har samma height som "nav-wrapper"
         list-style: none;
         .nav-item{
             flex: 0 0 20%;
@@ -34,9 +34,6 @@ body{
             align-items: center;
             @media screen and (min-width: 768px){
                 flex: 0 0 13%;
-                }
-            @media screen and (min-width: 1400px){
-                    justify-content: space-around;
                 }
             &.logo{
                 display: none;
@@ -67,19 +64,19 @@ body{
                         border-bottom: 4px solid $active-color;
                     }
                 }
+                .link-text{
+                    display: none;
+                    @media screen and (min-width: 768px){
+                        display: block;
+                        text-transform: uppercase;
+                    }
+                }
             }
         }
     }
 }
 
-.link-text{
-    display: none;
-    @media screen and (min-width: 768px){
-        display: block;
-        text-transform: uppercase;
-    }
-}
-
+// jag bestämmt att ha de här elementerna inte nestad för det gör lite lättare för mig att ha koll
 .search-wrapper{
     display: none;
     @media screen and (min-width: 1400px){

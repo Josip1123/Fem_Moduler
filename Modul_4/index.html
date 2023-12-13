@@ -13,11 +13,18 @@
     <body>
         <div class="wrapper">
             <header class="logo-wrapper">
-                <img src="" alt="brand logo" class="logo" />
+                <img
+                    class="logo"
+                    src="/Modul_4/img/pexels-realtoughcandycom-11035385.jpg"
+                    alt="brand logo"
+                    class="logo"
+                />
                 <h2 class="brand-name">EasyClass</h2>
             </header>
             <main class="main-container">
-                <h1 class="get-started">Get Started</h1>
+                <div class="get-started">
+                    <h1>Get Started</h1>
+                </div>
                 <form action="" class="register-form">
                     <select name="cities" id="cities">
                         <option value="" disabled selected hidden>
@@ -28,9 +35,13 @@
                         <option value="Gtbrg">Götenborg</option>
                         <option value="Karlstad">Karlstad</option>
                     </select>
+                    <label for="email">E-mail</label>
                     <input type="email" placeholder="name.surname@mail.com" />
-                    <input type="tel" placeholder="Mobile number" />
-                    <input type="password" placeholder="Password" />
+                    <label for="tel">Mobile Number</label>
+                    <input type="tel" placeholder="070 xxx xxxx" />
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Type Your Password" />
+                    <label for="">Confirm Password</label>
                     <input
                         type="password"
                         placeholder="Confirm Your Password"
@@ -40,22 +51,31 @@
                         <button>Register</button>
                     </div>
                 </form>
-                <aside>
-                    <img src="" alt="" />
-                    <div class="aide-content-container">
-                        <h3>bla bla</h3>
-                        <ul>
-                            <li>Get instant feedback</li>
-                            <li>Put your learning into practice</li>
-                            <li>Learn By Doing</li>
-                        </ul>
-                    </div>
-                    <header class="logo-wrapper">
-                        <img src="" alt="brand logo" class="logo" />
-                        <h2 class="brand-name">EasyClass</h2>
-                    </header>
-                </aside>
             </main>
+            <aside>
+                <div class="aide-content-container">
+                    <img
+                        class="aside-img"
+                        src="/Modul_4/img/pexels-realtoughcandycom-11035385.jpg"
+                        alt=""
+                    />
+                    <h3>bla bla</h3>
+                    <ul>
+                        <li>Get instant feedback</li>
+                        <li>Put your learning into practice</li>
+                        <li>Learn By Doing</li>
+                    </ul>
+                </div>
+                <header class="logo-wrapper hidden">
+                    <img
+                        class="logo"
+                        src="/Modul_4/img/pexels-realtoughcandycom-11035385.jpg"
+                        alt="brand logo"
+                        class="logo"
+                    />
+                    <h2 class="brand-name">EasyClass</h2>
+                </header>
+            </aside>
         </div>
     </body>
 </html>
