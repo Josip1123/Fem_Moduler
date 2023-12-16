@@ -30,17 +30,40 @@ $main-color: rgba(255, 166, 0, 0.466);
         flex-direction: column;
         align-items: center;
         .get-started{
-            border: solid 1px red;
             width: 90%;
             margin: 20px 0;
+            font-size: 1.5rem;
         }
         .register-form{
             display: flex;
             flex-direction: column;
             width: 90%;
+            font-size: 1.2rem;
             .login-button-container{
                 display: flex;
                 flex-direction: column;
+                .login-link{
+                    margin-bottom: 1rem;
+                    color: gray;
+                    &:visited{
+                        color: gray;
+                    }
+                }
+                button{
+                    height: 3.5rem;
+                    background-color: rgb(47, 28, 28);
+                    color: white;
+                    font-size: 1.5rem;
+                    border-radius: 0.8rem;
+                    margin: 1rem 0;
+                }
+            }
+            input, select{
+                height: 3.5rem;
+                text-align:start;
+                padding-left: 0.5rem;
+                margin: 1rem 0 2rem 0;
+                font-size: 1rem;
             }
         }
     }
