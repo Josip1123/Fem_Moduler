@@ -37,16 +37,51 @@
                         <option value="Karlstad">Karlstad</option>
                     </select>
                     <label for="email">E-mail</label>
-                    <input type="email" placeholder="name.surname@mail.com" />
-                    <label for="tel">Mobile Number</label>
-                    <input type="tel" placeholder="070 xxx xxxx" />
-                    <label for="password">Password</label>
-                    <input type="password" placeholder="Type Your Password" />
-                    <label for="">Confirm Password</label>
                     <input
-                        type="password"
-                        placeholder="Confirm Your Password"
+                        type="email"
+                        placeholder="name.surname@mail.com"
+                        name="email"
                     />
+                    <label for="tel">Mobile Number</label>
+                    <input type="tel" placeholder="+46 70 123 4567" />
+                    <!-- <div class="pw-label-wrapper">
+                        <label for="password">Password</label>
+                        <label for="confirm-pw">Confirm Password</label>
+                    </div>
+                    <div class="pw-wrapper">
+                        <input
+                            type="password"
+                            placeholder="Type Your Password"
+                            name="password"
+                            id="password"
+                        />
+                        <input
+                            type="password"
+                            placeholder="Confirm Your Password"
+                            name="confirm-pw"
+                            id="confirm-pw"
+                        />
+                    </div> -->
+                    <div class="pw-wrapper">
+                        <div class="pw-container">
+                            <label for="password">Password</label>
+                            <input
+                                type="password"
+                                placeholder="Type Your Password"
+                                name="password"
+                                id="password"
+                            />
+                        </div>
+                        <div class="pw-confirm-container">
+                            <label for="confirm-pw">Confirm Password</label>
+                            <input
+                                type="password"
+                                placeholder="Confirm Your Password"
+                                name="confirm-pw"
+                                id="confirm-pw"
+                            />
+                        </div>
+                    </div>
                     <div class="login-button-container">
                         <a class="login-link" href="#"
                             >Already a customer? Click to login</a
@@ -63,7 +98,9 @@
                         alt=""
                     />
                     <div class="aside-list-container">
-                        <h3 class="list-header">Bla bla</h3>
+                        <h3 class="list-header">
+                            EasyClass is the best option
+                        </h3>
                         <ul>
                             <li>Get instant feedback</li>
                             <li>Put your learning into practice</li>

@@ -1,16 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;400&display=swap');
-$main-color: rgba(255, 166, 0, 0.466);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;400&display=swap');
+$main-color: #FFE0D2;
+$body-bg: #F27D59;
+$wrapper-bg: #FFFFFf;
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
-
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: $body-bg;
+}
 
 .wrapper{
+    background-color: $wrapper-bg;
+    @media screen and (min-width: 768px){
+        margin: 3%;
+        border-radius: 30px;
+        overflow: hidden;
+        }
         .logo-wrapper{
             background-color: $main-color;
             display: flex;
@@ -26,51 +36,98 @@ $main-color: rgba(255, 166, 0, 0.466);
                 margin: 5%;
             }
         }  
-    .main-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .get-started{
-            width: 90%;
-            margin: 20px 0;
-            font-size: 1.5rem;
-        }
-        .register-form{
-            display: flex;
+        .main-container{
             flex-direction: column;
-            width: 90%;
-            font-size: 1.2rem;
-            .login-button-container{
+            align-items: center;
+            display: flex;
+                .get-started{
+                width: 90%;
+                margin: 20px 0;
+                font-size: 1.3rem;
+                font-weight: 500;
+                }
+            .register-form{
                 display: flex;
                 flex-direction: column;
-                .login-link{
-                    margin-bottom: 1rem;
-                    color: gray;
-                    &:visited{
-                        color: gray;
+                width: 90%;
+                font-size: 1.2rem;
+                    // .pw-wrapper{
+                    //     @media screen and (min-width: 768px){
+                    //         display: flex;
+                    //         justify-content: space-between;
+                    //         gap: 1.5rem;
+                    //         }
+                    // }
+                    // .pw-label-wrapper{
+                    //     @media screen and (min-width: 768px){
+                    //         display: flex;
+                    //         justify-content: space-between;
+                    //         gap: 1.5rem;
+                    //         width: 74%;
+                    //         }
+                    // }
+                    .pw-wrapper{
+                        @media screen and (min-width: 768px){
+                            display: flex;
+                            flex-direction: row;
+                            gap: 2rem;
+                            .pw-container, .pw-confirm-container{
+                                width: 50%;
+                            }
+                            }
                     }
-                }
-                button{
-                    height: 3.5rem;
-                    background-color: rgb(47, 28, 28);
-                    color: white;
-                    font-size: 1.5rem;
-                    border-radius: 0.8rem;
-                    margin: 1rem 0;
-                }
-            }
-            input, select{
-                height: 3.5rem;
-                text-align:start;
-                padding-left: 0.5rem;
-                margin: 1rem 0 2rem 0;
-                font-size: 1rem;
-                border-radius: 0.4rem;
-                border: 1px solid gray;
-                width: 100%;
+                    .login-button-container{
+                        display: flex;
+                        flex-direction: column;
+                        @media screen and (min-width: 768px){
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 1.5rem;
+                            }
+                        .login-link{
+                            margin-bottom: 1rem;
+                            color: gray;
+                            &:visited{
+                                color: gray;
+                            }
+                        }
+                    button{
+                        height: 3.5rem;
+                        width: 100%;
+                        background-color: rgb(47, 28, 28);
+                        color: white;
+                        font-size: 1.5rem;
+                        border-radius: 0.8rem;
+                        margin: 1rem 0;
+                        font-weight:600;
+                        @media screen and (min-width: 768px){
+                            width: 35%;
+                            height: 5rem;
+                            }
+                    }
+                        }
+                    input, select{
+                        height: 3.5rem;
+                        text-align:start;
+                        padding-left: 0.5rem;
+                        margin: 1rem 0 2rem 0;
+                        font-size: 1rem;
+                        border-radius: 0.4rem;
+                        border: 1px solid gray;
+                        width: 100%;
+                    }
+                    label{
+                        color: black;
+                        font-weight: 500;
+                    }
+                    #cities{
+                        @media screen and (min-width: 768px){
+                            width: 50%;
+                            }
+                    }
             }
         }
-    }
 }
 
 aside{
@@ -79,18 +136,26 @@ aside{
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media screen and (min-width: 768px){
+            flex-direction: row;
+            &>*{
+                margin-left: 5%;
+            }
+            }
         .aside-img{
             width: 90%;
             margin-bottom: 1.5rem;
         }
         .aside-list-container{
             width: 100%;
+            font-size: 1.3rem;
             .list-header{
                 margin-left: 5%;
+                font-weight: 500;
             }
             ul{
                 list-style-position: inside;
-                margin: 1.5rem 0 1.5rem 5%;
+                margin: 1.5rem 5%;
                 li{
                     padding: .5rem 0;
                     &:first-child{
