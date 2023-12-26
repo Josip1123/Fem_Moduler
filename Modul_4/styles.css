@@ -15,9 +15,18 @@ body {
 }
 @media screen and (min-width: 768px) {
   .wrapper {
-    margin: 3%;
+    margin: 1rem;
     border-radius: 30px;
     overflow: hidden;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 2rem);
+    max-height: 1080px;
+    overflow: scroll;
   }
 }
 .wrapper .logo-wrapper {
@@ -27,8 +36,20 @@ body {
   align-items: center;
   height: 6rem;
 }
+@media screen and (min-width: 1400px) {
+  .wrapper .logo-wrapper {
+    display: none;
+  }
+}
 .wrapper .logo-wrapper.hidden {
   display: none;
+}
+@media screen and (min-width: 1400px) {
+  .wrapper .logo-wrapper.hidden {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
 }
 .wrapper .logo-wrapper .logo {
   height: 3.5rem;
@@ -40,9 +61,16 @@ body {
   align-items: center;
   display: flex;
 }
+@media screen and (min-width: 1400px) {
+  .wrapper .main-container {
+    flex: 0 0 60%;
+    margin: auto 0;
+    padding: 0 3rem;
+  }
+}
 .wrapper .main-container .get-started {
   width: 90%;
-  margin: 20px 0;
+  margin: 4rem 0;
   font-size: 1.3rem;
   font-weight: 500;
 }
@@ -70,8 +98,13 @@ body {
   .wrapper .main-container .register-form .login-button-container {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
+    align-items: baseline;
+    margin-bottom: 1.7rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .wrapper .main-container .register-form .login-button-container {
+    margin-top: 1.5rem;
   }
 }
 .wrapper .main-container .register-form .login-button-container .login-link {
@@ -103,9 +136,15 @@ body {
   padding-left: 0.5rem;
   margin: 1rem 0 2rem 0;
   font-size: 1rem;
+  color: gray;
   border-radius: 0.4rem;
   border: 1px solid gray;
   width: 100%;
+}
+@media screen and (min-width: 1400px) {
+  .wrapper .main-container .register-form input, .wrapper .main-container .register-form select {
+    margin-bottom: 3rem;
+  }
 }
 .wrapper .main-container .register-form label {
   color: black;
@@ -119,6 +158,14 @@ body {
 
 aside {
   background-color: #FFE0D2;
+  flex: 0 0 40%;
+}
+@media screen and (min-width: 1400px) {
+  aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 aside .aside-content-container {
   display: flex;
@@ -133,15 +180,34 @@ aside .aside-content-container {
     margin-left: 5%;
   }
 }
+@media screen and (min-width: 1400px) {
+  aside .aside-content-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  aside .aside-content-container > * {
+    margin: 0;
+  }
+}
 aside .aside-content-container .aside-img {
   width: 90%;
   margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 1400px) {
+  aside .aside-content-container .aside-img {
+    height: 600px;
+  }
 }
 aside .aside-content-container .aside-list-container {
   width: 100%;
   font-size: 1.3rem;
 }
-aside .aside-content-container .aside-list-container .list-header {
+@media screen and (min-width: 1400px) {
+  aside .aside-content-container .aside-list-container {
+    margin-left: 22%;
+  }
+}
+aside .aside-content-container .aside-list-container .list-heading {
   margin-left: 5%;
   font-weight: 500;
 }
