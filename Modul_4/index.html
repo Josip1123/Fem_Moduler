@@ -26,20 +26,22 @@
                     <h1>Get Started</h1>
                 </div>
                 <form action="" class="register-form">
-                    <label for="cities">City</label>
-                    <select name="cities" id="cities">
-                        <option value="" disabled selected hidden>
-                            Choose Your City
-                        </option>
-                        <option value="Stockholm">Stockholm</option>
-                        <option value="Malmo">Malmö</option>
-                        <option value="Gtbrg">Götenborg</option>
-                        <option value="Karlstad">Karlstad</option>
-                    </select>
+                    <div class="city-select">
+                        <label for="cities">City</label>
+                        <select name="cities" id="cities">
+                            <option value="" disabled selected hidden>
+                                Choose Your City
+                            </option>
+                            <option value="Stockholm">Stockholm</option>
+                            <option value="Malmo">Malmö</option>
+                            <option value="Gtbrg">Götenborg</option>
+                            <option value="Karlstad">Karlstad</option>
+                        </select>
+                    </div>
                     <label for="email">E-mail</label>
                     <input
                         type="email"
-                        placeholder="name.surname@mail.com"
+                        placeholder="example@mail.com"
                         name="email"
                     />
                     <label for="tel">Mobile Number</label>
@@ -66,7 +68,7 @@
                     </div>
                     <div class="login-button-container">
                         <a class="login-link" href="#"
-                            >Already a customer? Click to login</a
+                            >Already a customer? Login here.</a
                         >
                         <button>Register</button>
                     </div>

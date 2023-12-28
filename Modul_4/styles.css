@@ -12,21 +12,24 @@ body {
 
 .wrapper {
   background-color: #FFFFFf;
+  width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .wrapper {
     margin: 1rem;
-    border-radius: 30px;
+    border-radius: 1.875rem;
     overflow: hidden;
+    max-width: 800px;
+    margin: auto;
   }
 }
 @media screen and (min-width: 1400px) {
   .wrapper {
     display: flex;
     flex-direction: row;
-    height: calc(100vh - 2rem);
-    max-height: 1080px;
-    overflow: scroll;
+    align-items: flex-end;
+    max-width: 1400px;
+    margin: 1rem auto;
   }
 }
 .wrapper .logo-wrapper {
@@ -34,7 +37,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 6rem;
+  height: 7rem;
 }
 @media screen and (min-width: 1400px) {
   .wrapper .logo-wrapper {
@@ -48,13 +51,17 @@ body {
   .wrapper .logo-wrapper.hidden {
     display: flex;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 }
 .wrapper .logo-wrapper .logo {
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 4rem;
+  width: 4rem;
   margin: 5%;
+}
+.wrapper .logo-wrapper .brand-name {
+  font-weight: 600;
+  font-size: 1.7rem;
 }
 .wrapper .main-container {
   flex-direction: column;
@@ -64,15 +71,22 @@ body {
 @media screen and (min-width: 1400px) {
   .wrapper .main-container {
     flex: 0 0 60%;
-    margin: auto 0;
     padding: 0 3rem;
   }
 }
 .wrapper .main-container .get-started {
-  width: 90%;
-  margin: 4rem 0;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
   font-size: 1.3rem;
   font-weight: 500;
+  margin: 1rem 0 1rem 0;
+  padding-left: 5%;
+}
+@media screen and (min-width: 1400px) {
+  .wrapper .main-container .get-started {
+    margin: 0 0 4rem 10%;
+  }
 }
 .wrapper .main-container .register-form {
   display: flex;
@@ -80,13 +94,37 @@ body {
   width: 90%;
   font-size: 1.2rem;
 }
-@media screen and (min-width: 768px) {
+.wrapper .main-container .register-form .city-select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.wrapper .main-container .register-form .city-select::after {
+  position: absolute;
+  content: url(/Modul_4/img/Arrow_down.svg);
+  top: 50%;
+  right: 1%;
+  transform: translateY(-39%);
+}
+@media screen and (min-width: 1400px) {
+  .wrapper .main-container .register-form .city-select::after {
+    transform: translateY(-50%);
+  }
+}
+@media screen and (min-width: 800px) {
+  .wrapper .main-container .register-form .city-select {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 800px) {
   .wrapper .main-container .register-form .pw-wrapper {
     display: flex;
     flex-direction: row;
     gap: 2rem;
   }
-  .wrapper .main-container .register-form .pw-wrapper .pw-container, .wrapper .main-container .register-form .pw-wrapper .pw-confirm-container {
+  .wrapper .main-container .register-form .pw-wrapper .pw-container,
+  .wrapper .main-container .register-form .pw-wrapper .pw-confirm-container {
     width: 50%;
   }
 }
@@ -94,43 +132,50 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   .wrapper .main-container .register-form .login-button-container {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 1.7rem;
   }
 }
 @media screen and (min-width: 1400px) {
   .wrapper .main-container .register-form .login-button-container {
-    margin-top: 1.5rem;
+    margin: 4rem 0 2rem 0;
   }
 }
 .wrapper .main-container .register-form .login-button-container .login-link {
-  margin-bottom: 1rem;
   color: gray;
+  margin-bottom: 1.5rem;
 }
 .wrapper .main-container .register-form .login-button-container .login-link:visited {
   color: gray;
 }
-.wrapper .main-container .register-form .login-button-container button {
-  height: 3.5rem;
-  width: 100%;
-  background-color: rgb(47, 28, 28);
-  color: white;
-  font-size: 1.5rem;
-  border-radius: 0.8rem;
-  margin: 1rem 0;
-  font-weight: 600;
+@media screen and (min-width: 800px) {
+  .wrapper .main-container .register-form .login-button-container .login-link {
+    flex: 0 0 50%;
+    height: 5rem;
+    margin-bottom: 0;
+  }
 }
-@media screen and (min-width: 768px) {
+.wrapper .main-container .register-form .login-button-container button {
+  height: 4rem;
+  width: 100%;
+  background-color: #413C3D;
+  color: white;
+  font-size: 1.7rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 800px) {
   .wrapper .main-container .register-form .login-button-container button {
-    width: 35%;
+    flex: 0 0 40%;
     height: 5rem;
   }
 }
-.wrapper .main-container .register-form input, .wrapper .main-container .register-form select {
+.wrapper .main-container .register-form input,
+.wrapper .main-container .register-form select {
   height: 3.5rem;
   text-align: start;
   padding-left: 0.5rem;
@@ -142,7 +187,8 @@ body {
   width: 100%;
 }
 @media screen and (min-width: 1400px) {
-  .wrapper .main-container .register-form input, .wrapper .main-container .register-form select {
+  .wrapper .main-container .register-form input,
+  .wrapper .main-container .register-form select {
     margin-bottom: 3rem;
   }
 }
@@ -150,48 +196,33 @@ body {
   color: black;
   font-weight: 500;
 }
-@media screen and (min-width: 768px) {
-  .wrapper .main-container .register-form #cities {
-    width: 50%;
-  }
-}
 
 aside {
   background-color: #FFE0D2;
-  flex: 0 0 40%;
-}
-@media screen and (min-width: 1400px) {
-  aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
 }
 aside .aside-content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   aside .aside-content-container {
     flex-direction: row;
-  }
-  aside .aside-content-container > * {
-    margin-left: 5%;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1400px) {
   aside .aside-content-container {
+    flex: 0 0 40%;
     flex-direction: column;
     justify-content: center;
-  }
-  aside .aside-content-container > * {
-    margin: 0;
+    height: 100%;
   }
 }
 aside .aside-content-container .aside-img {
-  width: 90%;
+  width: 100%;
   margin-bottom: 1.5rem;
+  padding: 0 5%;
 }
 @media screen and (min-width: 1400px) {
   aside .aside-content-container .aside-img {
@@ -219,5 +250,5 @@ aside .aside-content-container .aside-list-container ul li {
   padding: 0.5rem 0;
 }
 aside .aside-content-container .aside-list-container ul li:first-child {
-  padding-top: 0;
+  padding-top: 0px;
 }/*# sourceMappingURL=styles.css.map */

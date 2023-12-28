@@ -2,195 +2,262 @@
 $main-color: #FFE0D2;
 $body-bg: #F27D59;
 $wrapper-bg: #FFFFFf;
+$button-color:#413C3D;
+$tablet-width: 800px;
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Open Sans', sans-serif;
     background-color: $body-bg;
 }
 
-.wrapper{
+.wrapper {
     background-color: $wrapper-bg;
-    @media screen and (min-width: 768px){
+    width: 100%;
+
+    @media screen and (min-width: $tablet-width) {
         margin: 1rem;
-        border-radius: 30px;
+        border-radius: 1.875rem;
         overflow: hidden;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    @media screen and (min-width: 1400px) {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        max-width: 1400px;
+        margin: 1rem auto;
+    }
+
+    .logo-wrapper {
+        background-color: $main-color;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 7rem;
+
+        @media screen and (min-width: 1400px) {
+            display: none;
         }
-        @media screen and (min-width: 1400px){
-            display: flex;
-            flex-direction: row;
-            height: calc(100vh - 2rem); //hela viewport- 2rem av top bottom margine så att wcontent sitter mitt på
-            max-height: 1080px;
-            overflow: scroll;
+
+        &.hidden {
+            display: none;
+
+            @media screen and (min-width: 1400px) {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 2.5rem;
+            }
         }
-        .logo-wrapper{
-            background-color: $main-color;
+
+        .logo {
+            height: 4rem;
+            width: 4rem;
+            margin: 5%;
+        }
+
+        .brand-name {
+            font-weight: 600;
+            font-size: 1.7rem;
+        }
+    }
+
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+
+        @media screen and (min-width: 1400px) {
+            flex: 0 0 60%;
+            padding: 0 3rem;
+        }
+
+        .get-started {
             display: flex;
             justify-content: flex-start;
-            align-items: center;
-            height: 6rem;
-            @media screen and (min-width: 1400px){
-                display: none;
-            }
-            &.hidden{
-                display: none;
-                @media screen and (min-width: 1400px){
-                    display: flex;
-                    justify-content: center;
-                    margin-bottom: 1.5rem;
-                }
-            }
-            .logo{
-                height: 3.5rem;
-                width: 3.5rem;
-                margin: 5%;
-            }
-        }  
-        .main-container{
-            flex-direction: column;
-            align-items: center;
-            display: flex;
-            @media screen and (min-width: 1400px){
-                flex: 0 0 60%;
-                margin: auto 0;
-                padding: 0 3rem;
-            }
-            .get-started{
-            width: 90%;
-            margin: 4rem 0;
+            width: 100%;
             font-size: 1.3rem;
             font-weight: 500;
-            }
-            .register-form{
-                display: flex;
-                flex-direction: column;
-                width: 90%;
-                font-size: 1.2rem;
-                    .pw-wrapper{
-                        @media screen and (min-width: 768px){
-                            display: flex;
-                            flex-direction: row;
-                            gap: 2rem;
-                            .pw-container, .pw-confirm-container{
-                                width: 50%;
-                            }
-                            }
-                    }
-                    .login-button-container{
-                        display: flex;
-                        flex-direction: column;
-                        @media screen and (min-width: 768px){
-                            flex-direction: row;
-                            justify-content: space-between;
-                            align-items: baseline;
-                            margin-bottom: 1.7rem;
-                            }
-                        @media screen and (min-width: 1400px){
-                            margin-top: 1.5rem;
-                        }
-                        .login-link{
-                            margin-bottom: 1rem;
-                            color: gray;
-                            &:visited{
-                                color: gray;
-                            }
-                        }
-                    button{
-                        height: 3.5rem;
-                        width: 100%;
-                        background-color: rgb(47, 28, 28);
-                        color: white;
-                        font-size: 1.5rem;
-                        border-radius: 0.8rem;
-                        margin: 1rem 0;
-                        font-weight:600;
-                        @media screen and (min-width: 768px){
-                            width: 35%;
-                            height: 5rem;
-                        }
-                    }
-                    }
-                    input, select{
-                        height: 3.5rem;
-                        text-align:start;
-                        padding-left: 0.5rem;
-                        margin: 1rem 0 2rem 0;
-                        font-size: 1rem;
-                        color: gray;
-                        border-radius: 0.4rem;
-                        border: 1px solid gray;
-                        width: 100%;
-                        @media screen and (min-width: 1400px){
-                            margin-bottom: 3rem;
-                        }
-                    }
-                    label{
-                        color: black;
-                        font-weight: 500;
-                    }
-                    #cities{
-                        @media screen and (min-width: 768px){
-                            width: 50%;
-                            }
-                    }
+            margin: 1rem 0 1rem 0;
+            padding-left: 5%;
+
+            @media screen and (min-width: 1400px) {
+                margin: 0 0 4rem 10%;
             }
         }
+
+        .register-form {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            font-size: 1.2rem;
+
+            .city-select {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                &::after {
+                    position: absolute;
+                    content: url(/Modul_4/img/Arrow_down.svg);
+                    top: 50%;
+                    right: 1%;
+                    transform: translateY(-39%);
+
+                    @media screen and (min-width: 1400px) {
+                        transform: translateY(-50%);
+                    }
+                }
+
+                @media screen and (min-width: $tablet-width) {
+                    width: 50%;
+                }
+            }
+
+            .pw-wrapper {
+                @media screen and (min-width: $tablet-width) {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 2rem;
+
+                    .pw-container,
+                    .pw-confirm-container {
+                        width: 50%;
+                    }
+                }
+            }
+
+            .login-button-container {
+                display: flex;
+                flex-direction: column;
+
+                @media screen and (min-width: $tablet-width) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: baseline;
+                }
+
+                @media screen and (min-width: 1400px) {
+                    margin: 4rem 0 2rem 0;
+                }
+
+                .login-link {
+                    color: gray;
+                    margin-bottom: 1.5rem;
+
+                    &:visited {
+                        color: gray;
+                    }
+
+                    @media screen and (min-width: $tablet-width) {
+                        flex: 0 0 50%;
+                        height: 5rem;
+                        margin-bottom: 0;
+                    }
+                }
+
+                button {
+                    height: 4rem;
+                    width: 100%;
+                    background-color: $button-color;
+                    color: white;
+                    font-size: 1.7rem;
+                    border-radius: 1rem;
+                    font-weight: 600;
+                    margin-bottom: 1.5rem;
+
+                    @media screen and (min-width: $tablet-width) {
+                        flex: 0 0 40%;
+                        height: 5rem;
+                    }
+                }
+            }
+
+            input,
+            select {
+                height: 3.5rem;
+                text-align: start;
+                padding-left: 0.5rem;
+                margin: 1rem 0 2rem 0;
+                font-size: 1rem;
+                color: gray;
+                border-radius: 0.4rem;
+                border: 1px solid gray;
+                width: 100%;
+
+                @media screen and (min-width: 1400px) {
+                    margin-bottom: 3rem;
+                }
+            }
+
+            label {
+                color: black;
+                font-weight: 500;
+            }
+        }
+    }
 }
 
-aside{
-    background-color: $main-color ;
-    flex: 0 0 40%;
-    @media screen and (min-width: 1400px){
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .aside-content-container{
+aside {
+    background-color: $main-color;
+
+    .aside-content-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        @media screen and (min-width: 768px){
+
+        @media screen and (min-width: $tablet-width) {
             flex-direction: row;
-            &>*{
-                margin-left: 5%;
-            }
-            }
-        @media screen and (min-width: 1400px){
+            justify-content: center;
+        }
+
+        @media screen and (min-width: 1400px) {
+            flex: 0 0 40%;
             flex-direction: column;
             justify-content: center;
-            &>*{
-                margin: 0;
-            }
+            height: 100%;
         }
-        .aside-img{
-            width: 90%;
+
+        .aside-img {
+            width: 100%;
             margin-bottom: 1.5rem;
-            @media screen and (min-width: 1400px){
+            padding: 0 5%;
+
+            @media screen and (min-width: 1400px) {
                 height: 600px;
             }
         }
-        .aside-list-container{
+
+        .aside-list-container {
             width: 100%;
             font-size: 1.3rem;
-            @media screen and (min-width: 1400px){
+
+            @media screen and (min-width: 1400px) {
                 margin-left: 22%;
             }
-            .list-heading{
+
+            .list-heading {
                 margin-left: 5%;
                 font-weight: 500;
             }
-            ul{
+
+            ul {
                 list-style-position: inside;
                 margin: 1.5rem 5%;
-                li{
-                    padding: .5rem 0;
-                    &:first-child{
-                        padding-top: 0;
+
+                li {
+                    padding: 0.5rem 0;
+
+                    &:first-child {
+                        padding-top: 0px;
                     }
                 }
             }
