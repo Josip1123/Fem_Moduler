@@ -25,7 +25,7 @@ body {
         border-radius: 1.875rem;
         overflow: hidden;
         max-width: 800px;
-        margin: auto;
+        margin: 1rem auto;
     }
 
     @media screen and (min-width: 1400px) {
@@ -34,6 +34,7 @@ body {
         align-items: flex-end;
         max-width: 1400px;
         margin: 1rem auto;
+        height: calc(1080px - 9rem);
     }
 
     .logo-wrapper {
@@ -89,7 +90,7 @@ body {
             padding-left: 5%;
 
             @media screen and (min-width: 1400px) {
-                margin: 0 0 4rem 10%;
+                margin: 0 0 4rem 0;
             }
         }
 
@@ -109,8 +110,9 @@ body {
                     position: absolute;
                     content: url(/Modul_4/img/Arrow_down.svg);
                     top: 50%;
-                    right: 1%;
-                    transform: translateY(-39%);
+                    right: 1px;
+                    transform: translateY(-38%);
+                    pointer-events: none;
 
                     @media screen and (min-width: 1400px) {
                         transform: translateY(-50%);
@@ -152,6 +154,7 @@ body {
                 .login-link {
                     color: gray;
                     margin-bottom: 1.5rem;
+                    cursor: pointer;
 
                     &:visited {
                         color: gray;
@@ -198,6 +201,10 @@ body {
                 }
             }
 
+            select {
+                cursor: pointer;
+            }
+
             label {
                 color: black;
                 font-weight: 500;
@@ -223,7 +230,6 @@ aside {
             flex: 0 0 40%;
             flex-direction: column;
             justify-content: center;
-            height: 100%;
         }
 
         .aside-img {
@@ -241,7 +247,7 @@ aside {
             font-size: 1.3rem;
 
             @media screen and (min-width: 1400px) {
-                margin-left: 22%;
+                margin-left: 5%;
             }
 
             .list-heading {
@@ -263,4 +269,13 @@ aside {
             }
         }
     }
+}
+
+select:focus,
+input:focus,
+a:focus,
+button:focus,
+select:hover,
+input:hover{
+    outline: 2px solid $body-bg;
 }

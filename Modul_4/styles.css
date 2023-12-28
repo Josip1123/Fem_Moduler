@@ -20,7 +20,7 @@ body {
     border-radius: 1.875rem;
     overflow: hidden;
     max-width: 800px;
-    margin: auto;
+    margin: 1rem auto;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -30,6 +30,7 @@ body {
     align-items: flex-end;
     max-width: 1400px;
     margin: 1rem auto;
+    height: calc(1080px - 9rem);
   }
 }
 .wrapper .logo-wrapper {
@@ -85,7 +86,7 @@ body {
 }
 @media screen and (min-width: 1400px) {
   .wrapper .main-container .get-started {
-    margin: 0 0 4rem 10%;
+    margin: 0 0 4rem 0;
   }
 }
 .wrapper .main-container .register-form {
@@ -104,8 +105,9 @@ body {
   position: absolute;
   content: url(/Modul_4/img/Arrow_down.svg);
   top: 50%;
-  right: 1%;
-  transform: translateY(-39%);
+  right: 1px;
+  transform: translateY(-38%);
+  pointer-events: none;
 }
 @media screen and (min-width: 1400px) {
   .wrapper .main-container .register-form .city-select::after {
@@ -147,6 +149,7 @@ body {
 .wrapper .main-container .register-form .login-button-container .login-link {
   color: gray;
   margin-bottom: 1.5rem;
+  cursor: pointer;
 }
 .wrapper .main-container .register-form .login-button-container .login-link:visited {
   color: gray;
@@ -192,6 +195,9 @@ body {
     margin-bottom: 3rem;
   }
 }
+.wrapper .main-container .register-form select {
+  cursor: pointer;
+}
 .wrapper .main-container .register-form label {
   color: black;
   font-weight: 500;
@@ -216,7 +222,6 @@ aside .aside-content-container {
     flex: 0 0 40%;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
   }
 }
 aside .aside-content-container .aside-img {
@@ -235,7 +240,7 @@ aside .aside-content-container .aside-list-container {
 }
 @media screen and (min-width: 1400px) {
   aside .aside-content-container .aside-list-container {
-    margin-left: 22%;
+    margin-left: 5%;
   }
 }
 aside .aside-content-container .aside-list-container .list-heading {
@@ -251,4 +256,13 @@ aside .aside-content-container .aside-list-container ul li {
 }
 aside .aside-content-container .aside-list-container ul li:first-child {
   padding-top: 0px;
+}
+
+select:focus,
+input:focus,
+a:focus,
+button:focus,
+select:hover,
+input:hover {
+  outline: 2px solid #F27D59;
 }/*# sourceMappingURL=styles.css.map */
