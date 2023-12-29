@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;500&display=swap');
 
+//tyckte det var för lite kod för att skaffa variabler i detta projekt ^_^
+//eller separera de i olika filer
+
+//css reset
 * {
     padding: 0;
     margin: 0;
@@ -23,30 +27,20 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding: 1rem 0 0 1rem;
-    max-width: 400px;
     margin: 0 auto;
-
-    //valt "vanlig" ipad som tablet breakpoint
-    @media screen and (min-width: 768px) {
-        max-width: 1024px;
-    }
-
-    //desktop breakpoint
-    @media screen and (min-width: 1024px) {
-        max-width: 1024px;
-    }
+    width: 100%;
+    max-width: 1200px; //begränsat storlek så att det inte blir fördåligt på stora skärmar
 }
 
 .cards-container {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
     margin: 0 auto;
     padding: 1rem;
     gap: 1.5rem;
+    max-width: 1200px;
 
     @media screen and (min-width: 768px) {
-        max-width: 1024px;
         display: grid;
         // bestämmt att använda grid för jag tycker att det är ett lättare sätt att göra 
         // layout i 2 rader och inte leka med flex wrap :)
@@ -56,17 +50,15 @@ body {
     }
 
     // här tycker jag funkar både flex och grid men jag gillar grid mer
-    //eftersom det är lite mindre kod och lättare att hantera om man ska scalea
-    //men jag har gjort båda versioner:
+    // eftersom det är lite mindre kod och lättare att hantera om man ska scalea
+    // men jag har gjort båda versionerna:
     // .cards-container{
-    //     max-width: 1024px;
     //     display: flex;
     //     flex-direction: row;
     //     justify-content: space-between;
     //     gap: 1rem;
     // }
     @media screen and (min-width: 1024px) {
-        max-width: 1024px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -83,10 +75,6 @@ body {
             }
         }
 
-        .card-img {
-            display: block;
-        }
-
         .user-img {
             position: absolute;
             top: 1rem;
@@ -95,9 +83,10 @@ body {
             height: 50px;
             border: 2px solid white;
             border-radius: 50%;
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; //litet shadow under elementet
         }
-
+        //bestämt att lösa problemet genom att skaffa en wrapper div (".statistics-bar")
+        //och sedan två till div att kunna lättare positionera de
         .statistics-bar {
             display: flex;
             flex-direction: row;
