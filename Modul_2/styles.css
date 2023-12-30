@@ -11,16 +11,16 @@ img {
 
 p {
   width: 40ch;
-  margin: 100px auto;
+  margin: 6.25rem auto;
   font-size: 1rem;
 }
 
 p:first-child {
-  margin-top: 50px;
+  margin-top: 3.125rem;
 }
 
 p:last-child {
-  padding-bottom: 50px;
+  padding-bottom: 3.125rem;
 }
 
 .main-header {
@@ -29,7 +29,7 @@ p:last-child {
   background-size: cover;
   position: relative;
   height: 35vh;
-  min-height: 250px;
+  min-height: 16rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,11 +55,10 @@ p:last-child {
 .fixed-navigation {
   position: fixed;
   bottom: 0;
-  right: 0;
   width: 100%;
   background-color: green;
   height: 5vh;
-  min-height: 80px;
+  min-height: 5rem;
 }
 .fixed-navigation ul {
   list-style: none;
@@ -80,7 +79,7 @@ p:last-child {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 60px;
+  width: 3.75rem;
   text-decoration: none;
 }
 .fixed-navigation ul .plus-symbol {
@@ -97,6 +96,6 @@ p:last-child {
 }
 
 span.material-symbols-outlined {
-  font-size: 40px;
+  font-size: 2.5rem;
   color: white;
 }/*# sourceMappingURL=styles.css.map */
