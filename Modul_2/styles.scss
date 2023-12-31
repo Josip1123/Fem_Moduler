@@ -1,3 +1,6 @@
+//förlitet kod för att göra partials och variabler
+
+//css reset
 * {
     padding: 0;
     margin: 0;
@@ -10,7 +13,7 @@ img {
 }
 
 p {
-    width: 40ch;
+    width: 40ch;// gillar att använda ch för paragraphs istället för fixed width eller andra metoder, tycker det är ganska smydigt och responsive
     margin: 6.25rem auto;
     font-size: 1rem;
 }
@@ -27,7 +30,7 @@ p:last-child {
     background-image: url(img/pexels-oleksandr-p-12932558.jpg);
     background-position: center;
     background-size: cover;
-    position: relative;
+    position: relative;//så att jag kan positionera ::afer med position absolute
     height: 35vh;
     min-height: 16rem;
     display: flex; //använt flex eftersom jag tycker att det blir lättre att centrera
@@ -45,10 +48,7 @@ p:last-child {
         &::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
             background: linear-gradient(to bottom, transparent 0%, black 100%);
             z-index: -1;
         }
@@ -75,7 +75,7 @@ p:last-child {
             justify-content: center;
             align-items: center;
             height: 100%;
-            flex: 0 0 20%;
+            flex: 0 0 20%;// det finns 5 elementer och varje tar upp en likadan del av nav bar - därför 20%
         }
 
         a {
@@ -100,7 +100,7 @@ p:last-child {
 }
 
 
-//edits for google icons
+//edits för google icons
 
 .material-symbols-outlined {
     font-variation-settings:
