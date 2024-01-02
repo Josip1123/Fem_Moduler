@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.hero-p {
+    width: 45ch;
+    line-height: 1.7;
+    font-size: 0.9rem;
+    font-weight: 300;
+
+}
+
+.hero-h2 {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.hero-h3 {
+    font-size: 1rem;
+font-weight: 400;
+}
+
+.hero-p, .hero-h2, .hero-h3 {
+    padding: 0 1rem;
+}
+
+.section-h2{
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}

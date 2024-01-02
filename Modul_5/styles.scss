@@ -1,0 +1,77 @@
+@import "reset";
+@import "typography";
+
+body {
+    background-color: black;
+}
+
+.wrapper {
+    max-width: 100%;
+
+    .header-with-logo {
+        height: 12vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .cmore-logo {
+            display: block;
+            width: 45%;
+            padding: 1rem;
+            @media screen and (min-width: 1400px) {
+                width: 20%;
+            }
+        }
+    }
+
+    .hero {
+        background-image: url(/Modul_5/img/Image1.png);
+        height: 50vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 2rem;
+        @media screen and (min-width: 1400px) {
+            height: 65vh;
+        }
+    }
+
+    .new-movies {
+        .img-container-new-movies {
+            max-width: 100%;
+            display: flex;
+            padding: 1.5rem 1rem 0rem 1rem;
+            overflow: scroll;
+
+            img {
+                padding-right: 0.5rem;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    .action-movies {
+        .img-container-action-movies {
+            max-width: 100%;
+            display: flex;
+            padding: 1.5rem 1rem 0rem 1rem;
+            margin-bottom: 1.5rem;
+            overflow: scroll;
+
+            img {
+                padding-right: 0.5rem;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
