@@ -7,12 +7,11 @@ body {
 }
 
 .wrapper {
-    max-width: 100%;
-    // tänkte på DRY alla elementer med img bg har samma CSS så jag skrev allt här
-    &>*{
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    width: 100%;
+    max-width: 120rem;
+
+    @media screen and (min-width: 1920px) {
+        margin: 0 auto;
     }
 
     .header-with-logo {
@@ -29,6 +28,9 @@ body {
 
     .hero {
         background-image: url(img/Image1.png);
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
         height: 50vh;
         width: 100%;
         display: flex;
@@ -37,12 +39,20 @@ body {
         padding-bottom: 2rem;
 
         @media screen and (min-width: 1400px) {
-            height: 65vh;
+            height: 75vh;
+            padding-bottom: 4rem;
+
+            &>* {
+                margin-left: 3.5rem;
+            }
         }
     }
 
     .new-movies,
     .action-movies {
+        @media screen and (min-width: 1400px) {
+            margin-left: 3.5rem;
+        }
 
         .card-container {
             max-width: 100%;
@@ -51,16 +61,19 @@ body {
             overflow: scroll;
         }
 
-        .movie-img-containers {
+        .card {
             margin-right: 0.5rem;
             min-height: $card-height;
             min-width: $card-width;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
+
     }
 
     .new-movies {
-        .movie-img-containers {
-
+        .card {
             &:nth-child(1) {
                 background-image: $love-to-the-death;
             }
@@ -75,6 +88,12 @@ body {
 
             &:nth-child(4) {
                 background-image: $ghost-in-shell;
+
+                &:hover {
+                    background-image: $ghost-in-shell-expanded;
+                    min-width: calc($card-width * 2);
+                    transition: min-width 100ms;
+                }
             }
 
             &:nth-child(5) {
@@ -96,14 +115,22 @@ body {
     }
 
     .action-movies {
-        .movie-img-containers {
+        margin-bottom: 1rem;
+
+        .card {
 
             &:nth-child(1) {
                 background-image: $american-made;
             }
 
             &:nth-child(2) {
-                background-image: $deadpool-2;
+                background-image: $peppermint;
+
+                &:hover {
+                    background-image: $peppermint-expanded;
+                    min-width: calc($card-width * 2);
+                    transition: min-width 100ms;
+                }
             }
 
             &:nth-child(3) {
@@ -111,11 +138,17 @@ body {
             }
 
             &:nth-child(4) {
-                background-image: $ghost-in-shell;
+                background-image: $batman;
             }
 
             &:nth-child(5) {
                 background-image: $justice-league;
+
+                &:hover {
+                    background-image: $justice-league-expanded;
+                    min-width: calc($card-width * 2);
+                    transition: min-width 100ms;
+                }
             }
 
             &:nth-child(6) {
@@ -123,11 +156,51 @@ body {
             }
 
             &:nth-child(7) {
-                background-image: $batman;
+                background-image: $ninjago;
             }
 
             &:nth-child(8) {
-                background-image: $it;
+                background-image: $deadpool-2;
+            }
+        }
+    }
+
+    //tycker nesting är superbra men ibland för min skull jag 'tar ut' enstaka selectors att ha bättre koll
+
+    .expanded {
+        display: flex;
+        align-items: flex-end;
+
+        &:hover .card-content {
+            display: flex;
+        }
+
+        .card-content {
+            display: none;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1rem;
+
+            .card-info {
+                width: 45ch;
+            }
+
+            .card-footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 1rem;
+
+                .score {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.2rem;
+
+                    .imdb-logo {
+                        height: 1.2rem;
+                        width: 2.2rem;
+                    }
+                }
             }
         }
     }

@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700&display=swap');
+$p-font-size:0.9rem;
+$h2-font-size:1.7rem;
+$h3-font-size:1rem;
 
 body {
     font-size: 16px;
@@ -14,23 +17,59 @@ body {
     font-size: 0.9rem;
     font-weight: 300;
 
+    @media screen and (min-width: 768px) {
+        width: 60ch;
+        font-size: calc($p-font-size * 1.5);
+    }
+
+    @media screen and (min-width: 1400px) {
+        width: 80ch;
+        font-size: calc($p-font-size * 1.5);
+    }
+
+}
+
+.expanded p {
+    font-weight: 300;
 }
 
 .hero-h2 {
     font-size: 1.7rem;
     font-weight: 500;
+
+    @media screen and (min-width: 768px) {
+        font-size: calc($h2-font-size * 1.2);
+    }
+
+    @media screen and (min-width: 1400px) {
+        font-size: calc($h2-font-size * 1.5);
+    }
+}
+
+.expanded h2 {
+    font-size: 1.7rem;
 }
 
 .hero-h3 {
     font-size: 1rem;
-font-weight: 400;
+    font-weight: 400;
+
+    @media screen and (min-width: 768px) {
+        font-size: calc($h3-font-size * 1.2);
+    }
+
+    @media screen and (min-width: 1400px) {
+        font-size: calc($h3-font-size * 1.5);
+    }
 }
 
-.hero-p, .hero-h2, .hero-h3 {
+.hero-p,
+.hero-h2,
+.hero-h3 {
     padding: 0 1rem;
 }
 
-.section-h2{
+.film-section-title {
     padding-top: 1.5rem;
     padding-left: 1rem;
     font-size: 1.4rem;

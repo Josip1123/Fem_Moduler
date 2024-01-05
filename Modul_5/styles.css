@@ -25,22 +25,64 @@ body {
   font-size: 0.9rem;
   font-weight: 300;
 }
+@media screen and (min-width: 768px) {
+  .hero-p {
+    width: 60ch;
+    font-size: 1.35rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .hero-p {
+    width: 80ch;
+    font-size: 1.35rem;
+  }
+}
+
+.expanded p {
+  font-weight: 300;
+}
 
 .hero-h2 {
   font-size: 1.7rem;
   font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .hero-h2 {
+    font-size: 2.04rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .hero-h2 {
+    font-size: 2.55rem;
+  }
+}
+
+.expanded h2 {
+  font-size: 1.7rem;
 }
 
 .hero-h3 {
   font-size: 1rem;
   font-weight: 400;
 }
+@media screen and (min-width: 768px) {
+  .hero-h3 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .hero-h3 {
+    font-size: 1.5rem;
+  }
+}
 
-.hero-p, .hero-h2, .hero-h3 {
+.hero-p,
+.hero-h2,
+.hero-h3 {
   padding: 0 1rem;
 }
 
-.section-h2 {
+.film-section-title {
   padding-top: 1.5rem;
   padding-left: 1rem;
   font-size: 1.4rem;
@@ -52,12 +94,13 @@ body {
 }
 
 .wrapper {
-  max-width: 100%;
+  width: 100%;
+  max-width: 120rem;
 }
-.wrapper > * {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+@media screen and (min-width: 1920px) {
+  .wrapper {
+    margin: 0 auto;
+  }
 }
 .wrapper .header-with-logo {
   height: 10vh;
@@ -71,6 +114,9 @@ body {
 }
 .wrapper .hero {
   background-image: url(img/Image1.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
   height: 50vh;
   width: 100%;
   display: flex;
@@ -80,7 +126,17 @@ body {
 }
 @media screen and (min-width: 1400px) {
   .wrapper .hero {
-    height: 65vh;
+    height: 75vh;
+    padding-bottom: 4rem;
+  }
+  .wrapper .hero > * {
+    margin-left: 3.5rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .wrapper .new-movies,
+  .wrapper .action-movies {
+    margin-left: 3.5rem;
   }
 }
 .wrapper .new-movies .card-container,
@@ -90,57 +146,109 @@ body {
   padding: 1.5rem 0rem 0rem 1rem;
   overflow: scroll;
 }
-.wrapper .new-movies .movie-img-containers,
-.wrapper .action-movies .movie-img-containers {
+.wrapper .new-movies .card,
+.wrapper .action-movies .card {
   margin-right: 0.5rem;
   min-height: 19.875rem;
   min-width: 13.25rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.wrapper .new-movies .movie-img-containers:nth-child(1) {
+.wrapper .new-movies .card:nth-child(1) {
   background-image: url(img/convert_004.jpg);
 }
-.wrapper .new-movies .movie-img-containers:nth-child(2) {
+.wrapper .new-movies .card:nth-child(2) {
   background-image: url(img/convert_004.png);
 }
-.wrapper .new-movies .movie-img-containers:nth-child(3) {
+.wrapper .new-movies .card:nth-child(3) {
   background-image: url(img/convert_005.jpg);
 }
-.wrapper .new-movies .movie-img-containers:nth-child(4) {
+.wrapper .new-movies .card:nth-child(4) {
   background-image: url(img/convert_255.jpg);
 }
-.wrapper .new-movies .movie-img-containers:nth-child(5) {
+.wrapper .new-movies .card:nth-child(4):hover {
+  background-image: url(img/convert--3.jpg);
+  min-width: 26.5rem;
+  transition: min-width 100ms;
+}
+.wrapper .new-movies .card:nth-child(5) {
   background-image: url(img/convert_007.png);
 }
-.wrapper .new-movies .movie-img-containers:nth-child(6) {
+.wrapper .new-movies .card:nth-child(6) {
   background-image: url(img/convert_019.png);
 }
-.wrapper .new-movies .movie-img-containers:nth-child(7) {
+.wrapper .new-movies .card:nth-child(7) {
   background-image: url(img/convert_066.png);
 }
-.wrapper .new-movies .movie-img-containers:nth-child(8) {
+.wrapper .new-movies .card:nth-child(8) {
   background-image: url(img/convert_085.png);
 }
-.wrapper .action-movies .movie-img-containers:nth-child(1) {
+.wrapper .action-movies {
+  margin-bottom: 1rem;
+}
+.wrapper .action-movies .card:nth-child(1) {
   background-image: url(img/convert_060.png);
 }
-.wrapper .action-movies .movie-img-containers:nth-child(2) {
-  background-image: url(img/convert_073.png);
+.wrapper .action-movies .card:nth-child(2) {
+  background-image: url(img/convert_050.jpg);
 }
-.wrapper .action-movies .movie-img-containers:nth-child(3) {
+.wrapper .action-movies .card:nth-child(2):hover {
+  background-image: url(img/convert--2.jpg);
+  min-width: 26.5rem;
+  transition: min-width 100ms;
+}
+.wrapper .action-movies .card:nth-child(3) {
   background-image: url(img/convert_074.png);
 }
-.wrapper .action-movies .movie-img-containers:nth-child(4) {
-  background-image: url(img/convert_255.jpg);
-}
-.wrapper .action-movies .movie-img-containers:nth-child(5) {
-  background-image: url(img/convert_119.jpg);
-}
-.wrapper .action-movies .movie-img-containers:nth-child(6) {
-  background-image: url(img/convert_085.png);
-}
-.wrapper .action-movies .movie-img-containers:nth-child(7) {
+.wrapper .action-movies .card:nth-child(4) {
   background-image: url(img/convert_126.png);
 }
-.wrapper .action-movies .movie-img-containers:nth-child(8) {
+.wrapper .action-movies .card:nth-child(5) {
+  background-image: url(img/convert_119.jpg);
+}
+.wrapper .action-movies .card:nth-child(5):hover {
+  background-image: url(img/convert.jpg);
+  min-width: 26.5rem;
+  transition: min-width 100ms;
+}
+.wrapper .action-movies .card:nth-child(6) {
   background-image: url(img/convert_085.png);
+}
+.wrapper .action-movies .card:nth-child(7) {
+  background-image: url(img/convert_004.png);
+}
+.wrapper .action-movies .card:nth-child(8) {
+  background-image: url(img/convert_073.png);
+}
+.wrapper .expanded {
+  display: flex;
+  align-items: flex-end;
+}
+.wrapper .expanded:hover .card-content {
+  display: flex;
+}
+.wrapper .expanded .card-content {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+.wrapper .expanded .card-content .card-info {
+  width: 45ch;
+}
+.wrapper .expanded .card-content .card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.wrapper .expanded .card-content .card-footer .score {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.wrapper .expanded .card-content .card-footer .score .imdb-logo {
+  height: 1.2rem;
+  width: 2.2rem;
 }/*# sourceMappingURL=styles.css.map */
