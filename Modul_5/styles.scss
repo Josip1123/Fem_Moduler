@@ -68,7 +68,7 @@ body {
         }
 
         .card {
-            margin-right: 0.5rem;
+            margin-right: 1rem;
             min-height: $card-height;
             min-width: $card-width;
             background-size: cover;
@@ -98,7 +98,7 @@ body {
                 &:hover {
                     background-image: $ghost-in-shell-expanded;
                     min-width: calc($card-width * 2);
-                    transition: min-width 100ms;
+                    transition: min-width $animation-transition-duration;
                 }
             }
 
@@ -135,7 +135,7 @@ body {
                 &:hover {
                     background-image: $peppermint-expanded;
                     min-width: calc($card-width * 2);
-                    transition: min-width 100ms;
+                    transition: min-width $animation-transition-duration;
                 }
             }
 
@@ -153,7 +153,7 @@ body {
                 &:hover {
                     background-image: $justice-league-expanded;
                     min-width: calc($card-width * 2);
-                    transition: min-width 100ms;
+                    transition: min-width $animation-transition-duration;
                 }
             }
 
