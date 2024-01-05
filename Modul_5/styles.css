@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+}
+
 body {
   font-size: 16px;
   line-height: 1.5;
@@ -16,7 +20,7 @@ body {
 }
 
 .hero-p {
-  width: 45ch;
+  width: 47ch;
   line-height: 1.7;
   font-size: 0.9rem;
   font-weight: 300;
@@ -50,6 +54,11 @@ body {
 .wrapper {
   max-width: 100%;
 }
+.wrapper > * {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .wrapper .header-with-logo {
   height: 10vh;
   display: flex;
@@ -57,17 +66,13 @@ body {
   justify-content: flex-start;
 }
 .wrapper .header-with-logo .cmore-logo {
-  display: block;
   padding: 1rem;
   width: 12rem;
 }
 .wrapper .hero {
-  background-image: url(/Modul_5/img/Image1.png);
+  background-image: url(img/Image1.png);
   height: 50vh;
   width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -78,28 +83,64 @@ body {
     height: 65vh;
   }
 }
-.wrapper .new-movies .img-container-new-movies {
+.wrapper .new-movies .card-container,
+.wrapper .action-movies .card-container {
   max-width: 100%;
   display: flex;
-  padding: 1.5rem 1rem 0rem 1rem;
+  padding: 1.5rem 0rem 0rem 1rem;
   overflow: scroll;
 }
-.wrapper .new-movies .img-container-new-movies img {
-  padding-right: 0.5rem;
+.wrapper .new-movies .movie-img-containers,
+.wrapper .action-movies .movie-img-containers {
+  margin-right: 0.5rem;
+  min-height: 19.875rem;
+  min-width: 13.25rem;
 }
-.wrapper .new-movies .img-container-new-movies img:last-child {
-  padding-right: 0;
+.wrapper .new-movies .movie-img-containers:nth-child(1) {
+  background-image: url(img/convert_004.jpg);
 }
-.wrapper .action-movies .img-container-action-movies {
-  max-width: 100%;
-  display: flex;
-  padding: 1.5rem 1rem 0rem 1rem;
-  margin-bottom: 1.5rem;
-  overflow: scroll;
+.wrapper .new-movies .movie-img-containers:nth-child(2) {
+  background-image: url(img/convert_004.png);
 }
-.wrapper .action-movies .img-container-action-movies img {
-  padding-right: 0.5rem;
+.wrapper .new-movies .movie-img-containers:nth-child(3) {
+  background-image: url(img/convert_005.jpg);
 }
-.wrapper .action-movies .img-container-action-movies img:last-child {
-  padding-right: 0;
+.wrapper .new-movies .movie-img-containers:nth-child(4) {
+  background-image: url(img/convert_255.jpg);
+}
+.wrapper .new-movies .movie-img-containers:nth-child(5) {
+  background-image: url(img/convert_007.png);
+}
+.wrapper .new-movies .movie-img-containers:nth-child(6) {
+  background-image: url(img/convert_019.png);
+}
+.wrapper .new-movies .movie-img-containers:nth-child(7) {
+  background-image: url(img/convert_066.png);
+}
+.wrapper .new-movies .movie-img-containers:nth-child(8) {
+  background-image: url(img/convert_085.png);
+}
+.wrapper .action-movies .movie-img-containers:nth-child(1) {
+  background-image: url(img/convert_060.png);
+}
+.wrapper .action-movies .movie-img-containers:nth-child(2) {
+  background-image: url(img/convert_073.png);
+}
+.wrapper .action-movies .movie-img-containers:nth-child(3) {
+  background-image: url(img/convert_074.png);
+}
+.wrapper .action-movies .movie-img-containers:nth-child(4) {
+  background-image: url(img/convert_255.jpg);
+}
+.wrapper .action-movies .movie-img-containers:nth-child(5) {
+  background-image: url(img/convert_119.jpg);
+}
+.wrapper .action-movies .movie-img-containers:nth-child(6) {
+  background-image: url(img/convert_085.png);
+}
+.wrapper .action-movies .movie-img-containers:nth-child(7) {
+  background-image: url(img/convert_126.png);
+}
+.wrapper .action-movies .movie-img-containers:nth-child(8) {
+  background-image: url(img/convert_085.png);
 }/*# sourceMappingURL=styles.css.map */

@@ -1,12 +1,19 @@
 @import "reset";
 @import "typography";
+@import "variables";
 
 body {
-    background-color: black;
+    background-color: $background-color;
 }
 
 .wrapper {
     max-width: 100%;
+    // tänkte på DRY alla elementer med img bg har samma CSS så jag skrev allt här
+    &>*{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
     .header-with-logo {
         height: 10vh;
@@ -15,19 +22,15 @@ body {
         justify-content: flex-start;
 
         .cmore-logo {
-            display: block;
             padding: 1rem;
             width: 12rem;
         }
     }
 
     .hero {
-        background-image: url(/Modul_5/img/Image1.png);
+        background-image: url(img/Image1.png);
         height: 50vh;
         width: 100%;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -38,37 +41,93 @@ body {
         }
     }
 
-    .new-movies {
-        .img-container-new-movies {
+    .new-movies,
+    .action-movies {
+
+        .card-container {
             max-width: 100%;
             display: flex;
-            padding: 1.5rem 1rem 0rem 1rem;
+            padding: 1.5rem 0rem 0rem 1rem;
             overflow: scroll;
+        }
 
-            img {
-                padding-right: 0.5rem;
+        .movie-img-containers {
+            margin-right: 0.5rem;
+            min-height: $card-height;
+            min-width: $card-width;
+        }
+    }
 
-                &:last-child {
-                    padding-right: 0;
-                }
+    .new-movies {
+        .movie-img-containers {
+
+            &:nth-child(1) {
+                background-image: $love-to-the-death;
+            }
+
+            &:nth-child(2) {
+                background-image: $ninjago;
+            }
+
+            &:nth-child(3) {
+                background-image: $red-sparrow;
+            }
+
+            &:nth-child(4) {
+                background-image: $ghost-in-shell;
+            }
+
+            &:nth-child(5) {
+                background-image: $the-cry;
+            }
+
+            &:nth-child(6) {
+                background-image: $the-night-manager;
+            }
+
+            &:nth-child(7) {
+                background-image: $bay;
+            }
+
+            &:nth-child(8) {
+                background-image: $it;
             }
         }
     }
 
     .action-movies {
-        .img-container-action-movies {
-            max-width: 100%;
-            display: flex;
-            padding: 1.5rem 1rem 0rem 1rem;
-            margin-bottom: 1.5rem;
-            overflow: scroll;
+        .movie-img-containers {
 
-            img {
-                padding-right: 0.5rem;
+            &:nth-child(1) {
+                background-image: $american-made;
+            }
 
-                &:last-child {
-                    padding-right: 0;
-                }
+            &:nth-child(2) {
+                background-image: $deadpool-2;
+            }
+
+            &:nth-child(3) {
+                background-image: $wonder-woman;
+            }
+
+            &:nth-child(4) {
+                background-image: $ghost-in-shell;
+            }
+
+            &:nth-child(5) {
+                background-image: $justice-league;
+            }
+
+            &:nth-child(6) {
+                background-image: $it;
+            }
+
+            &:nth-child(7) {
+                background-image: $batman;
+            }
+
+            &:nth-child(8) {
+                background-image: $it;
             }
         }
     }
