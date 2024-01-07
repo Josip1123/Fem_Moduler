@@ -1,15 +1,5 @@
-//variables för färger
-$nav-bg-color: rgb(38, 4, 4);
-$active-color: brown;
-$body-background-color:rgb(74, 72, 72);
-$icon-color: rgb(173, 15, 173);
-
-//liten css reset
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+@import "reset";
+@import "variables";
 
 body {
     background-color: $body-background-color;

@@ -15,6 +15,10 @@ body {
     }
 }
 
+p{
+    text-wrap: pretty;
+}
+
 .hero-p {
     width: 47ch;
     font-size: 0.9rem;
@@ -26,7 +30,7 @@ body {
     }
 
     @media screen and (min-width: 1400px) {
-        width: 80ch;
+        width: 75ch;
         font-size: calc($p-font-size * 1.3);
     }
 

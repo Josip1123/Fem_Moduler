@@ -6,6 +6,14 @@
     box-sizing: border-box;
 }
 
-img {
+html {
+    scroll-behavior: smooth;
+}
+
+img,
+picture,
+svg,
+video {
     display: block;
+    max-width: 100%;
 }
