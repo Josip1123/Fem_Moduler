@@ -44,6 +44,10 @@ body {
     align-items: flex-end;
     max-width: 1400px;
     margin: 1rem auto;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .wrapper {
     height: calc(1080px - 9rem);
   }
 }
