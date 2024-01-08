@@ -172,6 +172,7 @@ body {
                     text-align: center;
                     border-radius: 1rem;
                     font-weight: 600;
+                    margin-top: 2rem;
                     margin-bottom: 1.5rem;
                     padding: 0;
 
@@ -269,6 +270,7 @@ aside {
     }
 }
 
+//jag lekte lite här med outline on hover och focus
 select:focus,
 input:focus,
 a:focus,
