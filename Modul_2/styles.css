@@ -18,19 +18,11 @@ video {
   max-width: 100%;
 }
 
-img {
-  display: block;
-  width: 100%;
-}
-
 p {
   width: 40ch;
   margin: 6.25rem auto;
   font-size: 1rem;
-}
-
-p:first-child {
-  margin-top: 3.125rem;
+  text-wrap: pretty;
 }
 
 p:last-child {

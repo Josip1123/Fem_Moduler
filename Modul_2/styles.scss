@@ -1,18 +1,11 @@
 @import "reset";
 
-img {
-    display: block;
-    width: 100%;
-}
 
 p {
-    width: 40ch;// gillar att använda ch för paragraphs istället för fixed width eller andra metoder, tycker det är ganska smydigt och responsive
+    width: 40ch; // gillar att använda ch för paragraphs istället för fixed width eller andra metoder, tycker det är ganska smydigt och responsive
     margin: 6.25rem auto;
     font-size: 1rem;
-}
-
-p:first-child {
-    margin-top: 3.125rem;
+    text-wrap: pretty; //preventerar att ett ord blir kvar i ny rad ("orphan")
 }
 
 p:last-child {
@@ -23,7 +16,7 @@ p:last-child {
     background-image: url(img/pexels-oleksandr-p-12932558.jpg);
     background-position: center;
     background-size: cover;
-    position: relative;//så att jag kan positionera ::afer med position absolute
+    position: relative; //så att jag kan positionera ::afer med position absolute
     height: 35vh;
     min-height: 16rem;
     display: flex; //använt flex eftersom jag tycker att det blir lättre att centrera
@@ -68,7 +61,7 @@ p:last-child {
             justify-content: center;
             align-items: center;
             height: 100%;
-            flex: 0 0 20%;// det finns 5 elementer och varje tar upp en likadan del av nav bar - därför 20%
+            flex: 0 0 20%; // det finns 5 elementer och varje tar upp en likadan del av nav bar - därför 20%
         }
 
         a {
@@ -91,6 +84,7 @@ p:last-child {
         }
     }
 }
+
 
 
 //edits för google icons
