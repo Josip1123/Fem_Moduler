@@ -6,6 +6,7 @@ body {
     background-color: $background-color;
 }
 
+
 .wrapper {
     width: 100%;
     max-width: 120rem;
@@ -68,6 +69,9 @@ body {
         }
 
         .card {
+            //jag gav fixed width och height till cards att göra sakerna enklare
+            /*använder background picture istället för <img> eftersom jag kan inte byta src on hover utan medan det går med backgrounden, och det gör sakerna 
+            lätare att hanera utan absolute positioning etc*/
             margin-right: 1rem;
             min-height: $card-height;
             min-width: $card-width;
@@ -78,6 +82,8 @@ body {
 
     }
 
+    //sparat alla olika bakgrunds bilder som variabler i separat file
+    //utan js och <img> detta va bästa jag kunde tänka på :D
     .new-movies {
         .card {
             &:nth-child(1) {
@@ -97,7 +103,7 @@ body {
 
                 &:hover {
                     background-image: $ghost-in-shell-expanded;
-                    min-width: calc($card-width * 2);
+                    min-width: calc($card-width * 2); //de ska bli 2x större on hover
                     transition: min-width $animation-transition-duration;
                 }
             }
@@ -188,7 +194,7 @@ body {
             padding: 1rem;
 
             .card-info {
-                width: 45ch;
+                width: 45ch; //fixed width göra att det blir inget konstigt med animation
             }
 
             .card-footer {
