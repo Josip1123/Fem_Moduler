@@ -165,15 +165,15 @@ body {
                     }
                 }
 
-                button {
-                    height: 4rem;
-                    width: 100%;
+                #submit-btn {
                     background-color: $button-color;
                     color: white;
-                    font-size: 1.7rem;
+                    font-size: 1.3rem;
+                    text-align: center;
                     border-radius: 1rem;
                     font-weight: 600;
                     margin-bottom: 1.5rem;
+                    padding: 0;
 
                     @media screen and (min-width: $tablet-width) {
                         flex: 0 0 40%;

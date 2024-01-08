@@ -179,18 +179,18 @@ body {
     margin-bottom: 0;
   }
 }
-.wrapper .main-container .register-form .login-button-container button {
-  height: 4rem;
-  width: 100%;
+.wrapper .main-container .register-form .login-button-container #submit-btn {
   background-color: #413C3D;
   color: white;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
+  text-align: center;
   border-radius: 1rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
+  padding: 0;
 }
 @media screen and (min-width: 800px) {
-  .wrapper .main-container .register-form .login-button-container button {
+  .wrapper .main-container .register-form .login-button-container #submit-btn {
     flex: 0 0 40%;
     height: 5rem;
   }
