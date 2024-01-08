@@ -28,12 +28,6 @@ body {
         margin: 1rem auto;
     }
 
-    @media screen and (min-width: 1920px) {
-        height: calc(1080px - 9rem); //ser lite bättre ut on fullscrean 1920x1080p skärmar
-    }
-
-
-
 
     .logo-wrapper {
         background-color: $main-color;
