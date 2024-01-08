@@ -7,8 +7,16 @@
   box-sizing: border-box;
 }
 
-img {
+html {
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+svg,
+video {
   display: block;
+  max-width: 100%;
 }
 
 body {
@@ -24,6 +32,10 @@ body {
   }
 }
 
+p {
+  text-wrap: pretty;
+}
+
 .hero-p {
   width: 47ch;
   font-size: 0.9rem;
@@ -37,7 +49,7 @@ body {
 }
 @media screen and (min-width: 1400px) {
   .hero-p {
-    width: 80ch;
+    width: 75ch;
     font-size: 1.17rem;
   }
 }
@@ -152,7 +164,7 @@ body {
   max-width: 100%;
   display: flex;
   padding: 1.5rem 0rem 0rem 1rem;
-  overflow: scroll;
+  overflow: auto;
 }
 .wrapper .new-movies .card,
 .wrapper .action-movies .card {

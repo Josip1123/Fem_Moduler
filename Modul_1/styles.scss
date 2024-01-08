@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;500&display=swap');
 @import "reset";
-img {
-    display: block;
-    width: 100%;
-}
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -12,100 +9,114 @@ body {
     background-color: rgb(171, 170, 170);
 }
 
-.hamburger-menu {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 1rem 0 0 1rem;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px; //begränsat storlek så att det inte blir fördåligt på stora skärmar
-}
+.wrapper {
+    margin: 0 auto; // för att centrera efter max width
+    max-width: 1400px; //begränsat storlek så att det inte blir förstort på stora skärmar
 
-.cards-container {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 1rem;
-    gap: 1rem;
-    max-width: 1200px;
+    .hamburger-menu {
+        display: flex; //flexbox att lättare centrera hamburger iconen
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1.5rem 0 0 1.5rem;
+        width: 100%;
 
-    @media screen and (min-width: 768px) {
-        display: grid;
-        // bestämmt att använda grid för jag tycker att det är ett lättare sätt att göra 
-        // layout i 2 rader och inte leka med flex wrap :)
-        grid-template-columns: 1fr 1fr;
-        column-gap: 1rem;
-        row-gap: 1rem;
+        span.material-icons {
+            font-size: 2.2rem;
+            color: rgb(54, 53, 53);
+        }
     }
 
-    // här tycker jag funkar både flex och grid men jag gillar grid mer
-    // eftersom det är lite mindre kod och lättare att hantera om man ska scalea
-    // men jag har gjort båda versionerna:
-
-    //     display: flex;
-    //     flex-direction: row;
-    //     justify-content: space-between;
-    //     gap: 1rem;
-
-    @media screen and (min-width: 1024px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .card {
-        position: relative;
+    .cards-container {
         display: flex;
         flex-direction: column;
-        color: rgb(92, 92, 92);
+        padding: 1.5rem;
+        gap: 1.5rem;
 
         @media screen and (min-width: 768px) {
-            .card {
-                padding: 0px;
-            }
+            display: grid;
+            /* bestämmt att använda grid för jag tycker att det är ett lättare sätt att göra 
+            layout i 2 rader och inte leka med flex wrap */
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1rem;
+            row-gap: 1rem;
         }
 
-        .user-img {
-            position: absolute; //user image positionerad absolute relative till card container
-            top: 1rem;
-            left: 1rem;
-            width: 3rem;
-            height: 3rem;
-            border: 2px solid white;
-            border-radius: 50%;
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; //litet shadow under elementet
+        /* här tycker jag funkar både flex och grid men jag gillar grid mer
+        eftersom det är lite mindre kod och lättare att hantera om man ska scalea
+        men jag har gjort båda versionerna: */
+
+        //     display: flex;
+        //     flex-direction: row;
+        //     justify-content: space-between;
+        //     gap: 1rem;
+
+        @media screen and (min-width: 1024px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
         }
 
-        //bestämt att lösa problemet genom att skaffa en wrapper div (".statistics-bar")
-        //och sedan två till div att kunna lättare positionera de
-        .statistics-bar {
+        .card {
+            position: relative;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            height: 3.5rem;
-            padding: 0 1.5rem;
-            background-color: whitesmoke;
+            flex-direction: column;
+            color: grey;
 
-            .likes-and-comments {
+            .user-img {
+                position: absolute; //user image positionerad absolute relative till card container
+                top: 1rem;
+                left: 1rem;
+                width: 3.5rem;
+                height: 3.5rem;
+                border: 2px solid white;
+                border-radius: 50%;
+                box-shadow: 9px 11px 15px -5px rgba(0,0,0,0.7); //lite shadow under elementet
+            }
+
+            /*bestämt att lösa problemet genom att skaffa en wrapper div (".statistics-bar")
+            och sedan två till div att kunna lättare positionera de */
+            .statistics-bar {
                 display: flex;
+                flex-direction: row;
+                justify-content: space-between;
                 align-items: center;
-            }
+                padding: 1rem 1.5rem;
+                background-color: whitesmoke;
 
-            .save {
-                display: flex;
-                flex-direction: row-reverse;
-                align-items: center;
-                text-transform: uppercase;
-            }
+                .likes-and-comments {
+                    display: flex;
+                    align-items: center;
+                }
 
-            p {
-                padding: 0 1rem;
-            }
+                .save {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    text-transform: uppercase;
+                }
 
-            a {
-                color: rgb(71, 70, 70);
+                p {
+                    padding: 0 1rem;
+                }
+
+                a {
+                    color: rgb(71, 70, 70);
+                }
+
+                span.material-icons {
+                    font-size: 2rem;
+                    color: rgb(54, 53, 53);
+                }
             }
         }
     }
+}
+
+//edits för google icons
+
+.material-icons {
+    font-variation-settings:
+        'FILL'1,
+        'wght'400,
+        'GRAD'0,
+        'opsz'40;
 }
