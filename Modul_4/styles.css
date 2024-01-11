@@ -46,11 +46,6 @@ body {
     margin: 1rem auto;
   }
 }
-@media screen and (min-width: 1920px) {
-  .wrapper {
-    height: calc(1080px - 9rem);
-  }
-}
 .wrapper .logo-wrapper {
   background-color: #FFE0D2;
   display: flex;
@@ -104,7 +99,7 @@ body {
 }
 @media screen and (min-width: 1400px) {
   .wrapper .main-container .get-started {
-    margin: 0 0 4rem 0;
+    margin: 2rem 0 4rem 0;
   }
 }
 .wrapper .main-container .register-form {
@@ -244,7 +239,6 @@ aside .aside-content-container {
   }
 }
 aside .aside-content-container .aside-img {
-  width: 100%;
   margin-bottom: 1.5rem;
   padding: 0 5%;
 }
