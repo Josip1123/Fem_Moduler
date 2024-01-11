@@ -262,13 +262,3 @@ aside {
         }
     }
 }
-
-//jag lekte lite här med outline on hover och focus
-select:focus,
-input:focus,
-a:focus,
-button:focus,
-select:hover,
-input:hover {
-    outline: 2px solid $body-bg;
-}
