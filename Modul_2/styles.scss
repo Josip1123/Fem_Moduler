@@ -12,6 +12,11 @@ p:last-child {
     padding-bottom: 3.125rem;
 }
 
+.container{
+    @media screen and (min-width: 1024px) {
+        margin: 0 auto;
+        max-width: 64rem;
+    }
 .main-header {
     background-image: url(img/pexels-oleksandr-p-12932558.jpg);
     background-position: center;
@@ -45,9 +50,11 @@ p:last-child {
     position: fixed;
     bottom: 0;
     width: 100%;
+    max-width: 64rem;
     background-color: green;
     height: 5vh;
     min-height: 5rem;
+    border-bottom: 0.3rem solid darkgreen;
 
     ul {
         list-style: none;
@@ -61,7 +68,7 @@ p:last-child {
             justify-content: center;
             align-items: center;
             height: 100%;
-            flex: 0 0 20%; // det finns 5 elementer och varje tar upp en likadan del av nav bar - därför 20%
+            flex: 1 1 auto;
         }
 
         a {
@@ -83,6 +90,7 @@ p:last-child {
             }
         }
     }
+}
 }
 
 

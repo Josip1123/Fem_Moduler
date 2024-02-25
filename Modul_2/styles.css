@@ -29,7 +29,13 @@ p:last-child {
   padding-bottom: 3.125rem;
 }
 
-.main-header {
+@media screen and (min-width: 1024px) {
+  .container {
+    margin: 0 auto;
+    max-width: 64rem;
+  }
+}
+.container .main-header {
   background-image: url(img/pexels-oleksandr-p-12932558.jpg);
   background-position: center;
   background-size: cover;
@@ -41,43 +47,44 @@ p:last-child {
   align-items: center;
   justify-content: flex-end;
 }
-.main-header .main-title {
+.container .main-header .main-title {
   padding-bottom: 2rem;
   color: white;
   font-size: 2rem;
   z-index: 1;
 }
-.main-header .main-title::after {
+.container .main-header .main-title::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, transparent 0%, black 100%);
   z-index: -1;
 }
-
-.fixed-navigation {
+.container .fixed-navigation {
   position: fixed;
   bottom: 0;
   width: 100%;
+  max-width: 64rem;
   background-color: green;
   height: 5vh;
   min-height: 5rem;
+  border-bottom: 0.3rem solid darkgreen;
 }
-.fixed-navigation ul {
+.container .fixed-navigation ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100%;
 }
-.fixed-navigation ul li {
+.container .fixed-navigation ul li {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  flex: 0 0 20%;
+  flex: 1 1 auto;
 }
-.fixed-navigation ul a {
+.container .fixed-navigation ul a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,12 +92,12 @@ p:last-child {
   width: 3.75rem;
   text-decoration: none;
 }
-.fixed-navigation ul .plus-symbol {
+.container .fixed-navigation ul .plus-symbol {
   background-color: white;
   border-bottom-left-radius: 40%;
   border-bottom-right-radius: 40%;
 }
-.fixed-navigation ul .plus-symbol .material-symbols-outlined {
+.container .fixed-navigation ul .plus-symbol .material-symbols-outlined {
   color: red;
 }
 

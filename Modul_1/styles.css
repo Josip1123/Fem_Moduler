@@ -29,7 +29,7 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1024px;
 }
 .wrapper .hamburger-menu {
   display: flex;
@@ -43,10 +43,7 @@ body {
   color: rgb(54, 53, 53);
 }
 .wrapper .cards-container {
-  display: flex;
-  flex-direction: column;
   padding: 1.5rem;
-  gap: 1.5rem;
   /* här tycker jag funkar både flex och grid men jag gillar grid mer
   eftersom det är lite mindre kod och lättare att hantera om man ska scalea
   men jag har gjort båda versionerna: */
@@ -70,9 +67,8 @@ body {
 }
 .wrapper .cards-container .card {
   position: relative;
-  display: flex;
-  flex-direction: column;
   color: grey;
+  margin-bottom: 1rem;
   /*bestämt att lösa problemet genom att skaffa en wrapper div (".statistics-bar")
   och sedan två till div att kunna lättare positionera de */
 }
@@ -91,7 +87,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   background-color: whitesmoke;
 }
 .wrapper .cards-container .card .statistics-bar .likes-and-comments {
