@@ -59,8 +59,9 @@
                 </nav>
                 <div class="search-and-profile">
                     <div class="searchbar">
-                        <form action="">
-                            <input type="text" placeholder="Search..." />
+                        <form action="" class="search-form">
+                            <label for="searchbar-input" class="visually-hidden">Search</label>
+                            <input id=searchbar-input name="searchbar" type="search" placeholder="Search..." />
                             <button
                                 type="submit"
                                 class="search-btn"
@@ -73,7 +74,8 @@
                             </button>
                         </form>
                     </div>
-                    <div class="profile-img-container">
+                    <div class="profile-img-container"> 
+                        <!-- visste inte om det ska vara en button, en länk eller ngt annat så jag använt div med img element, men det går bra/lätt att ändra vid behöv -->
                         <img
                             src="/Modul_3/img/pexels-photo-2401442.jpeg"
                             alt=""

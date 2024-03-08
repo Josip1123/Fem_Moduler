@@ -26,6 +26,7 @@ body {
 a {
   list-style: none;
   all: unset;
+  cursor: pointer;
 }
 
 header {
@@ -89,7 +90,7 @@ header {
   display: flex;
   flex: 1 1 auto;
   justify-content: center;
-  padding: 1.5rem 0;
+  padding: 1.2rem 0;
 }
 .wrapper .main-nav .nav-list .nav-item .nav-link.logo {
   justify-content: flex-start;
@@ -126,19 +127,33 @@ header {
   border-radius: 50%;
   border: 2px solid white;
 }
-
-.searchbar {
+.search-and-profile .searchbar {
+  margin-right: 2rem;
   display: none;
 }
-.searchbar form {
+.search-and-profile .searchbar .search-form {
   display: flex;
+  position: relative;
+  height: 60%;
 }
-.searchbar form button {
-  color: black;
+.search-and-profile .searchbar .search-form .search-btn {
+  cursor: pointer;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  right: 10px;
+  top: 10px;
+}
+.search-and-profile .searchbar .search-form #searchbar-input {
+  border-radius: 2rem;
+  padding-left: 2.5rem;
+  text-align: left;
+  font-size: 1rem;
 }
 @media (min-width: 1024px) {
-  .searchbar {
+  .search-and-profile .searchbar {
     display: flex;
+    align-items: center;
   }
 }
 
@@ -148,10 +163,11 @@ header {
   color: rgb(173, 15, 173);
 }
 .material-symbols-outlined.active {
-  color: brown;
+  color: darkred;
 }
 .material-symbols-outlined.btn {
   display: block;
+  color: black;
 }
 @media (min-width: 768px) {
   .material-symbols-outlined {
@@ -160,4 +176,16 @@ header {
   .material-symbols-outlined.logo {
     display: flex;
   }
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }/*# sourceMappingURL=styles.css.map */
